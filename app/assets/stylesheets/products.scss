@@ -2,14 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table{
-	padding-left: 40px;	
+ul li{
+	display: block-inline;
 }
 
-th{
-	padding-right: 50px;
-}
-
-form{
-	padding-left: 40px;
+#about-product{
+	height: 120px;
 }
