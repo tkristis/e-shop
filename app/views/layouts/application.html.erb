@@ -15,9 +15,9 @@
 
 <nav>
 	<ul>
-		<a href="/static_pages/index"><li>Home</li></a>
-		<a href="/static_pages/about"><li>About</li></a>
-		<a href="/static_pages/contact"><li>Contact</li></a>
+    <li><%= link_to "Home", static_pages_path %></li> <li><a href="/static_pages/about">About</a></li> <li><a href="/static_pages/contact">Contact</a></li>
+    <li><%= link_to "About", static_pages_path %></li> <li><a href="/static_pages/contact">Contact</a></li> <li><a href="/static_pages/home">Home</a></li>
+    <li><%= link_to "Contact", static_pages_path %></li> <li><a href="/static_pages/home">Home</a></li> <li><a href="/static_pages/about">About</a></li>
 	</ul>
 </nav>
 
