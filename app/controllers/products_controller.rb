@@ -21,6 +21,17 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  # Access search term
+  def index
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+      # return our filtered list here
+    else
+      @products = Product.all
+    end
+  end
+
   # POST /products
   # POST /products.json
   def create

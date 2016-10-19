@@ -1,23 +1,46 @@
+* { 
+	box-sizing: border-box; 
+}
+
 body{
 	background-color: #D4D4D4;
 	color: #191919;
 	font-family: Arial, serif;
+	padding-top: 40px;
+	height: 100%;
 }
 
-nav{
+p{
+	font-size: 1em;
+}
+
+.navbar{
 	background-color: #3E4651;
 }
 
-nav li{
+.navbar li{
 	display: inline-block;
 	text-decoration: none;
-	padding: 10px 5px;
+	font-size: 1.1em;
+	font-family: 'Futura', Arial, sans-serif;
+}
+
+.projectName a{
 	color: #FFFFFF;
 }
 
-nav li a:hover{
-	color: white;
-	background-color: none;
+.projectName a:visited:hover{
+	color: #00B5B5;
+	background-color: #3E4651;
+}
+
+.navbar li a:visited{
+	color: #FFFFFF;
+}
+
+.navbar li a:visited:hover{
+	background-color: #D4D4D4;
+	color: #00B5B5;
 }
 
 h1{
@@ -34,8 +57,14 @@ h1{
 }
 
 footer{
-	padding: 5px 0;
+	padding: 10px 0;
 	background-color: #F1654C;
 	color: #D5CFC1;
 	text-align: center;
 }
+
+/**** About ****/
+.about{
+	margin: 0 40px;
+}
+

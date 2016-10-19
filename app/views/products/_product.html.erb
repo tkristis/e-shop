@@ -1,7 +1,7 @@
 <div class="col-sm-2 col-md-4">
   <%= image_tag(product.image_url, class: "img-responsive") %>
-  <h4><%= product.name %></h4>
-  <p id="about-product"><%= product.description %></p>
+  <h4 id="product-name"><%= product.name %></h4>
+  <p id="product-description"><%= product.description %></p>
   <h5><%= product.color %></h5>
   <h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4>
   <ul>
