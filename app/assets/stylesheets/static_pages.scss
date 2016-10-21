@@ -14,6 +14,13 @@ p{
 	font-size: 1em;
 }
 
+footer{
+	padding: 10px 0;
+	background-color: #F1654C;
+	color: #D5CFC1;
+	text-align: center;
+}
+
 .navbar{
 	background-color: #3E4651;
 }
@@ -51,20 +58,27 @@ h1{
 	margin: 0 auto;
 }
 
-.contacts{
-	text-align: center;
-	padding-bottom: 20px;
-}
-
-footer{
-	padding: 10px 0;
-	background-color: #F1654C;
-	color: #D5CFC1;
-	text-align: center;
-}
 
 /**** About ****/
 .about{
 	margin: 0 40px;
 }
 
+/**** Contacts ****/
+.contact-header{
+	padding-top: 20px;
+}
+
+.contact-group{
+	padding-bottom: 15px;
+}
+
+.contact-group .form-group{
+	margin: 0 auto;
+	width: 60%;
+	padding: 10px 0;
+}
+
+#email-submit-button{
+	margin-top: 10px;
+}
