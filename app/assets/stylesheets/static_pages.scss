@@ -6,7 +6,7 @@ body{
 	background-color: #D4D4D4;
 	color: #191919;
 	font-family: Arial, serif;
-	padding-top: 40px;
+	padding-top: 50px;
 	height: 100%;
 }
 
@@ -50,6 +50,14 @@ footer{
 	color: #00B5B5;
 }
 
+.navbar-toggle{
+	border: 1px solid white;
+}
+
+.icon-bar{
+	background-color: #FFFFFF;
+}
+
 h1{
 	text-align: center;
 }
@@ -81,4 +89,11 @@ h1{
 
 #email-submit-button{
 	margin-top: 10px;
+}
+
+/**** Media Query ****/
+@media (min-width: 300px) and (max-width: 766px){
+	body{
+		padding-top: 90px;
+	}
 }
