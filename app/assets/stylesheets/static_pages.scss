@@ -83,7 +83,6 @@ h1{
 
 .contact-group .form-group{
 	margin: 0 auto;
-	width: 450px;
 	padding: 10px 0;
 }
 
@@ -94,7 +93,7 @@ h1{
 /**** Media Query ****/
 @media (min-width: 320px) and (max-width: 766px){
 	body{
-		padding-top: 90px;
+		padding-top: 40px;
 	}
 }
 
@@ -105,10 +104,25 @@ h1{
 	}
 	#email-submit-button{
 		width: 300px;
-		margin: 0 auto;	
+		margin: 20px auto;	
 	}
 	.form-group .form-control{
 		width: 300px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 766px) {
+	.form-group label{
+		width: 450px;
+		margin: 0 auto;
+	}
+	#email-submit-button{
+		width: 450px;
+		margin: 20px auto;	
+	}
+	.contact-group .form-control{
+		width: 450px;
 		margin: 0 auto;
 	}
 }
