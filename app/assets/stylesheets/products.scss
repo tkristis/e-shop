@@ -7,7 +7,7 @@ ul li{
 }
 
 #product-description{
-	height: 180px;
+	height: 100px;
 }
 
 #product-name{
@@ -16,4 +16,12 @@ ul li{
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img{
 	margin: 0 auto;
+}
+
+.show-product{
+	padding: 80px 0 40px 0;
+}
+
+.show-product-right{
+	padding-left: 40px;
 }
