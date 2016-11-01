@@ -1,6 +1,10 @@
 <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 products">
-      
+  
+
+  <%= link_to product_path(product), class: 'product_link' do %>
   <%= image_tag(product.image_url, class: "img-responsive", size: "300x250") %>
+  <% end %>
+  
   <h4 id="product-name"><%= product.name %></h4>
   <p id="product-description"><%= product.description %></p>
   <h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4>
