@@ -7,13 +7,10 @@ ul li{
 }
 
 .products{
-	margin: 0 10px;
 	padding-top: 30px;
-	width: 300px;
 }
 
 #product-description{
-	height: 220px;
 	padding-top: 20px;
 }
 
@@ -32,4 +29,15 @@ ul li{
 .show-product-right{
 	padding: 40px 0 0 0;
 	text-align: left;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+	.products p{
+		text-align: center;
+	}
+	.products h4{
+		text-align: center;
+		font-size: 1.3em;
+		padding-top: 10px;
+	}
 }
