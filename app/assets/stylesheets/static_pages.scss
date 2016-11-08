@@ -91,6 +91,11 @@ h1{
 	margin-top: 20px;
 }
 
+/****Landing page ****/
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+	margin: 0 auto;
+}
+
 /**** Media Query ****/
 @media (min-width: 320px) and (max-width: 766px){
 	body{

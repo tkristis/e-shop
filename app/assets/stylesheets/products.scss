@@ -18,13 +18,21 @@ ul li{
 	height: 40px;
 }
 
-.carousel-inner>.item>a>img, .carousel-inner>.item>img{
-	margin: 0 auto;
+.show-product{
+	padding-top: 60px;
 }
 
 .show-product-right{
-	padding: 40px 0 0 0;
+	padding: 20px 0 0 0;
 	text-align: left;
+}
+
+.comment-rate-product{
+	padding: 40px 0 0 67px;
+}
+
+.product-reviews{
+	padding-left: 15px;
 }
 
 @media (min-width: 320px) and (max-width: 768px){
@@ -35,5 +43,8 @@ ul li{
 		text-align: center;
 		font-size: 1.3em;
 		padding-top: 10px;
+	}
+	.comment-rate-product{
+		padding: 25px 0 0 5px;
 	}
 }

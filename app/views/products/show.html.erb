@@ -2,9 +2,7 @@
   <div class="row">
     
     <div class="col-md-6 col-xs-12 show-product-left">
-    
       <%= image_tag @product.image_url, class: "img-responsive", size: "450x400" %>
-
     </div>
 
     <div class="col-md-6 col-xs-12 show-product-right">
@@ -32,10 +30,24 @@
         <strong>Price:</strong><i class="glyphicon glyphicon-usd"></i>
         <%= @product.price %>
       </p>
+
+      <p>
+        <strong>Average Rating:</strong> 
+        <div class="rated" data-score="<%= @product.average_rating %>"></div> 
+      </p>
+
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>
     </div>
+
+  </div>
+  <div class="row">
+
+  <div class="col-md-8 comment-rate-product">
+    <p><%= render partial: 'new_comment' %></p>
+    <p><%= render partial: 'comments' %></p>
+  </div>
 
   </div>
 </div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
