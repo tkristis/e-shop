@@ -43,11 +43,18 @@
   </div>
   <div class="row">
 
-  <div class="col-md-8 comment-rate-product">
-    <p><%= render partial: 'new_comment' %></p>
-    <p><%= render partial: 'comments' %></p>
-  </div>
-
+    <div class="col-md-8 comment-rate-product">
+      <p><%= render partial: 'new_comment' %></p>
+      <p><%= render partial: 'comments' %></p>
+      
+      <div class="digg_pagination">
+        <div class="page_info">
+        <%= page_entries_info @comments %>
+        </div>
+      <%= will_paginate @comments, :container => false %>
+      </div>
+      
+    </div>
   </div>
 </div>
 
