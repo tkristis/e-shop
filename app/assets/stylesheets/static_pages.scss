@@ -37,19 +37,22 @@ footer{
 	color: #FFFFFF;
 }
 
+.projectName a:hover,
 .projectName a:visited:hover{
 	color: #00B5B5;
 	background-color: #3E4651;
 }
 
-.navbar li a:visited{
-	color: #FFFFFF;
+.navbar li a,
+.navbar li a:visited {
+    color: #FFFFFF;
 }
 
 .navbar a{	
 	-webkit-transition: color 800ms;
+    transition: color 800ms;
 }
-
+.navbar li a:hover,
 .navbar li a:visited:hover{
 	background-color: #D4D4D4;
 	color: #00B5B5;
