@@ -122,20 +122,22 @@ h1{
 }
 
 @media (min-width: 320px) and (max-width: 766px){
-	.form-group label{
-		width: 300px;
-		margin: 0 auto;
-	}
 	#email-submit-button{
 		width: 300px;
 		margin: 20px auto;	
 	}
-	.form-group .form-control{
+	.contact-group .form-group{
 		width: 300px;
 		margin: 0 auto;
 	}
 	.about p{
 		margin: 0 10px;
+	}
+	.navbar-form .navbar-right{
+		margin: 0;
+	}
+	#nav-form-control{
+		width: 300px;
 	}
 }
 
