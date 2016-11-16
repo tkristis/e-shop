@@ -1,19 +1,23 @@
 <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 products">
   
-  <h4 id="product-name"><%= product.name %></h4>
+  <h3 id="product-name"><%= product.name %></h3>
   
-  <%= link_to product_path(product), class: 'product_link' do %>
-  <%= image_tag(product.image_url, class: "img-responsive", size: "300x250") %>
-  <% end %>
+  <div class="product-img-list">
+    <%= link_to product_path(product), class: 'product_link' do %>
+    <%= image_tag(product.image_url, class: "img-responsive",  size: "300x250") %>
+    <% end %>
+    <span class="product-img-text"><span><h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4></span></span>
+  </div>
   
-  <p id="product-description"><%= truncate product.description, length: 50 %></p>
-  <h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4>
+  <p id="product-description"><%= truncate product.description, length: 100 %></p>
       
-  <ul>
-    <li><%= link_to 'Show', product %></li>
-    <li><%= link_to 'Edit', edit_product_path(product) %></li>
-    <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-  </ul>
+  <% if signed_in? && current_user.admin? %>
+    <ul>
+      <li><%= link_to 'Show', product %></li>
+      <li><%= link_to 'Edit', edit_product_path(product) %></li>
+      <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+  <% end %>
     
 </div><!-- /col -->
 
