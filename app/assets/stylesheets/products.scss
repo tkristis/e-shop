@@ -13,8 +13,10 @@ ul li{
 }
 
 #product-name{
-	font-size: 1.3em;
-	font-family: 'Deftone Stylus Regular';
+	font-size: 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	height: 40px;
+	text-align: center;
 }
 
 .product-img-list {
@@ -60,7 +62,9 @@ span.product-img-text span {
 } 
 
 #product-description{
-	padding-top: 20px;
+	padding-top: 15px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.15em;
 }
 
 /********
