@@ -5,7 +5,7 @@
 body{
 	background-color: #D4D4D4;
 	color: #191919;
-	font-family: Arial, serif;
+	font-family: 'PT Sans', sans-serif;
 	height: 100%;
 	padding-top: 51px;
 }
@@ -29,12 +29,14 @@ footer{
 .navbar li{
 	display: inline-block;
 	text-decoration: none;
-	font-size: 1.1em;
-	font-family: 'Futura', Arial, sans-serif;
+	font-size: 1.15em;
+	font-family: 'Roboto', sans-serif;
 }
 
 .projectName a{
 	color: #FFFFFF;
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
 }
 
 .projectName a:hover,
