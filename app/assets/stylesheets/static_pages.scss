@@ -74,11 +74,16 @@ h1{
 
 .img-responsive{
 	margin: 0 auto;
+	width: 100%;
 }
 
 /**** Home ****/
 #welcome{
 	padding: 6px 0;
+}
+
+#home-img{
+	width: 65%;
 }
 
 /**** About ****/
