@@ -13,36 +13,36 @@ ul li{
 }
 
 #product-name{
-	font-size: 1.5em;
+	font-size  : 1.5em;
 	font-family: 'Source Sans Pro', sans-serif;
-	height: 40px;
-	text-align: center;
+	height     : 40px;
+	text-align : center;
 }
 
 .product-img-list {
-	position: relative;
+	position       : relative;
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+	margin         : 0;
+	padding        : 0;
+	text-align     : center;
 }
 
 span.product-img-text {
-	background: rgba(0,0,0,0.5);
-	color: white;
-	cursor: pointer;
-	display: table;
-	position: absolute;
-	height: 70px;
-	width: 100%;
-	left: 0; 
-	right:0;
-	bottom: 0; 
-	opacity: 0;
+	background        : rgba(0,0,0,0.5);
+	color             : white;
+	cursor            : pointer;
+	display           : table;
+	position          : absolute;
+	height            : 70px;
+	width             : 100%;
+	left              : 0; 
+	right             :0;
+	bottom            : 0; 
+	opacity           : 0;
 	-webkit-transition: opacity 500ms;
-	-moz-transition: opacity 500ms;
-	-o-transition: opacity 500ms;
-	transition: opacity 500ms;
+	-moz-transition   : opacity 500ms;
+	-o-transition     : opacity 500ms;
+	transition        : opacity 500ms;
 }
 
 .product-img-list:hover span.product-img-text {
@@ -50,21 +50,21 @@ span.product-img-text {
 }
 
 span.product-img-text span {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+	display       : table-cell;
+	text-align    : center;
+	vertical-align: middle;
 }
 
 .product-img-text h4{
-	color: #D4D4D4;
-	font-size: 1.7em;
+	color      : #D4D4D4;
+	font-size  : 1.7em;
 	text-shadow: 0 0 3px #3E4651;
 } 
 
 #product-description{
 	padding-top: 15px;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1.15em;
+	font-size  : 1.15em;
 }
 
 /********
@@ -72,11 +72,11 @@ span.product-img-text span {
 ********/
 .show-product{
 	padding-top: 60px;
-	font-size: 1.15em;
+	font-size  : 1.15em;
 }
 
 .show-product-right{
-	padding: 20px 0 0 0;
+	padding   : 20px 0 0 0;
 	text-align: left;
 }
 
@@ -97,14 +97,18 @@ span.product-img-text span {
 ********/
 
 @media (min-width: 320px) and (max-width: 768px){
-	.products p{
+	.products{
+		p{
 		text-align: center;
-	}
-	.products h4{
-		text-align: center;
-		font-size: 1.3em;
+		}
+		
+		h4{
+		text-align : center;
+		font-size  : 1.3em;
 		padding-top: 10px;
+		}
 	}
+	
 	.comment-rate-product{
 		padding: 25px 0 0 5px;
 	}

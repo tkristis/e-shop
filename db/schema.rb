@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20161112215000) do
     t.datetime "updated_at",          null: false
     t.string   "color"
     t.integer  "price"
-    t.integer  "year_or_manufacture"
     t.integer  "year_of_manufacture"
   end
 

@@ -5,9 +5,9 @@
       <h1>Contact Us</h1>
     </div>
 
-  <%= flash[:notice] %>
+    <%= flash[:notice] %>
 
-  <%= form_tag("/static_pages/thank_you") do %>
+    <%= form_tag("/static_pages/thank_you") do %>
     
     <div class="row">
       
@@ -28,9 +28,9 @@
           <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
           <%= submit_tag "Send", id: "email-submit-button", class: "btn btn-primary btn-lg btn-block"  %>
         </div>      
-      
+        
       </div>
-    
+      
     </div>
   </div>   
 </div>

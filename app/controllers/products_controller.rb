@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       if Rails.env.development?
         @products = Product.where("name LIKE ?", "%#{search_term}%")
-    else
+      else
         @products = Product.where("name ilike ?", "%#{search_term}%")
       end
     else
@@ -82,5 +82,5 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :color, :price, :year_of_manufacture)
     end
-end
+  end
 
