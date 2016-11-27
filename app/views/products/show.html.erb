@@ -1,6 +1,6 @@
 <div class="container show-product">
   <div class="row">
-    
+
     <div class="col-md-6 col-xs-12 show-product-left">
       <%= image_tag @product.image_url, class: "img-responsive", id: "product-img" %>
     </div>
@@ -35,27 +35,31 @@
         <strong>Average Rating:</strong> 
         <div class="rated" data-score="<%= @product.average_rating %>"></div> 
       </p>
-    
-    <% if signed_in? && current_user.admin? %>
+
+      <%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+
+      <% if signed_in? && current_user.admin? %>
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Back', products_path %>
-    <% end %>
-    
-    </div>
+      <% end %>
 
+    </div>
   </div>
+  
   <div class="row">
 
     <div class="col-md-8 comment-rate-product">
-      
+
       <p><%= render partial: 'new_comment' %></p>
       <p><%= render partial: 'comments' %></p>
       
       <div class="digg_pagination">
         <div class="page_info">
-        <%= page_entries_info @comments %>
+          <%= page_entries_info @comments %>
         </div>
-      <%= will_paginate @comments, :container => false %>
+        <%= will_paginate @comments, :container => false %>
       </div>
 
     </div>
