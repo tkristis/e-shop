@@ -70,5 +70,5 @@ end
 
   gem 'stripe'
 
-  ## Security scanner
+  ## Security scanner 
   gem "brakeman", :require => false
