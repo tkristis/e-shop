@@ -31,38 +31,48 @@ footer{
 	background-color: #3E4651;
 }
 
-.navbar li{
-	display        : inline-block;
-	text-decoration: none;
-	font-size      : 1.15em;
-	font-family    : 'Roboto', sans-serif;
+.navbar{
+	li{
+		display        : inline-block;
+		text-decoration: none;
+		font-size      : 1.15em;
+		font-family    : 'Roboto', sans-serif;
+	}
+	li a{
+		color: #FFFFFF;
+	}
+	li a:visited{
+		color: #FFFFFF
+	}
+	a{
+		-webkit-transition: color 800ms;
+		transition        : color 800ms;
+	}
+	li a:hover{
+		background-color: #D4D4D4;
+		color           : #00B5B5;
+	}
+	li a:visited:hover{
+		background-color: #D4D4D4;
+		color           : #00B5B5;
+	}
 }
 
-.projectName a{
-	color      : #FFFFFF;
-	font-size  : 1.2em;
-	font-family: 'Roboto', sans-serif;
-}
-
-.projectName a:hover,
-.projectName a:visited:hover{
-	color           : #00B5B5;
-	background-color: #3E4651;
-}
-
-.navbar li a,
-.navbar li a:visited {
-    color: #FFFFFF;
-}
-
-.navbar a{	
-	-webkit-transition: color 800ms;
-	transition        : color 800ms;
-}
-.navbar li a:hover,
-.navbar li a:visited:hover{
-	background-color: #D4D4D4;
-	color           : #00B5B5;
+.projectName{
+	a{
+		color          : #FFFFFF;
+		font-size      : 1.2em;
+		font-family    : 'Roboto', sans-serif;
+		text-decoration: none;
+	}
+	a:hover{
+		color           : #00B5B5;
+		background-color: #3E4651;
+	}
+	a:visited:hover{
+		color           : #00B5B5;
+		background-color: #3E4651;
+	}
 }
 
 .navbar-toggle{
@@ -156,7 +166,16 @@ h1{
 	}
 }
 
-@media (min-width: 766px) {
+@media (min-width: 766px) and (max-width: 788px){
+	.navbar li {
+		font-size: 0.9em;
+	}
+	.projectName{
+		font-size: 1.1em;
+	}
+}
+
+@media (min-width: 766px){
 	.form-group label{
 		width : 450px;
 		margin: 0 auto;
