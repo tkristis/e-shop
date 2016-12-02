@@ -164,6 +164,16 @@ h1{
 	#nav-form-control{
 		width: 300px;
 	}
+	.navbar-nav{
+		text-align: center;
+	}
+	form.navbar-form.navbar-right{
+		text-align: center;
+	}
+	#nav-form-control{
+		width: 70%;
+		margin: 0 auto 15px auto;
+	}
 }
 
 @media (min-width: 766px) and (max-width: 788px){
