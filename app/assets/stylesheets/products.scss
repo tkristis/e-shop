@@ -102,9 +102,13 @@ span.product-img-text span {
 ********/
 @media (min-width: 320px) and (max-width: 425px){
 	.show-product-right{
-		margin-left: 40px;
+		margin: 0 20px;
+	}
+	.comment-rate-product{
+		margin: 0 20px;
 	}
 }
+
 @media (min-width: 320px) and (max-width: 768px){
 	.products{
 		p{
