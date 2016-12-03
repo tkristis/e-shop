@@ -12,7 +12,8 @@ $(document).on('turbolinks:load', function(){
 
   // Product image zoom 
   $('.img-zoom').elevateZoom({
-    zoomType        : "inner",
-    cursor: "crosshair"
+    zoomType: "inner",
+    cursor  : "crosshair",
+    easing: "true"
   }); 
 });
