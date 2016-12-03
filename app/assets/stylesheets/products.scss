@@ -72,6 +72,7 @@ span.product-img-text span {
 ********/
 .show-product{
 	padding-top: 60px;
+	padding-bottom: 60px;
 	font-size  : 1.15em;
 }
 
@@ -99,7 +100,11 @@ span.product-img-text span {
 /********
 	Media query
 ********/
-
+@media (min-width: 320px) and (max-width: 425px){
+	.show-product-right{
+		margin-left: 40px;
+	}
+}
 @media (min-width: 320px) and (max-width: 768px){
 	.products{
 		p{
