@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @current_user.comment = Comment.find([:user_id])
+    @comment = current_user.comments.find(params[:id])
     product = @comment.product
     @comment.destroy
     redirect_to product

@@ -2,12 +2,16 @@
 	box-sizing: border-box; 
 }
 
+html{
+	height: 100%;
+}
+
 body{
 	background-color: #D4D4D4;
 	color           : #191919;
 	font-family     : 'PT Sans', sans-serif;
 	height          : 100%;
-	padding-top     : 51px;
+	padding-top     : 52px;
 }
 
 p{
@@ -20,7 +24,7 @@ footer{
 	background-color: #F1654C;
 	color           : #D5CFC1;
 	text-align      : center;
-	position        : relative;
+	position        : fixed;
 	right           : 0;
 	bottom          : 0;
 	left            : 0;
@@ -35,7 +39,7 @@ footer{
 	li{
 		display        : inline-block;
 		text-decoration: none;
-		font-size      : 1.15em;
+		font-size      : 1.2em;
 		font-family    : 'Roboto', sans-serif;
 	}
 	li a{
@@ -61,7 +65,7 @@ footer{
 .projectName{
 	a{
 		color          : #FFFFFF;
-		font-size      : 1.2em;
+		font-size      : 1.25em;
 		font-family    : 'Roboto', sans-serif;
 		text-decoration: none;
 	}
@@ -132,8 +136,8 @@ h1{
 
 /****Landing page ****/
 .carousel-inner>.item>a>img, .carousel-inner>.item>img{
-	margin: 0 auto;
-	width : 59%;
+	margin: 20px auto;
+	width : 52%;
 }
 
 /**** Media Query ****/

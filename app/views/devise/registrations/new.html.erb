@@ -19,7 +19,7 @@
 
         <div class="field form-group">
           <%= f.label :Date_of_birth %><br />
-          <%= f.date_select( :date_of_birth, { :order => [:month, :day, :year], :start_year => 1900, :end_year => Date.today.year }, { :required => true, class: "form-control" }) %>
+          <%= f.date_select( :date_of_birth, { :order => [:month, :day, :year], :start_year => 1920, :end_year => 10.years.ago.year }, { :required => true, class: "form-control" }) %>
         </div>
 
         <div class="field form-group">
