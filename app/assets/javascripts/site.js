@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+var refreshRating = function() {
 
   // Product coment review stars 
   $('.rating').raty( { path: '/assets/raty', scoreName: 'comment[rating]' 
@@ -9,6 +9,10 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+};
+
+$(document).on('turbolinks:load', function(){
+    refreshRating();
 
   // Product image zoom 
   $('.img-zoom').elevateZoom({
