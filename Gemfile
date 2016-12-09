@@ -72,3 +72,5 @@ end
 
   ## Security scanner 
   gem "brakeman", :require => false
+
+  gem 'dalli'
