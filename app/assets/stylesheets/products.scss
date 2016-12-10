@@ -101,13 +101,15 @@ span.product-img-text span {
 	Media query
 ********/
 @media (min-width: 320px) and (max-width: 425px){
-	.show-product-right{
-		margin: 0 30px;
+	.show-product-right p{
+		margin        : 0 15px;
+		line-height   : 1.6;
+		font-size     : 1.2em;
+		letter-spacing: 1px;
+		text-align    : justify;
+		padding-bottom: 15px;
 	}
-	.comment-rate-product{
-		margin: 0 30px;
-	}
-}
+}	
 
 @media (min-width: 320px) and (max-width: 768px){
 	.products{

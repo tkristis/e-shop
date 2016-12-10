@@ -29,8 +29,12 @@ footer{
 	padding         : 10px;
 }
 
+/********
+	NAVIGATION BAR
+********/
 .navbar{
 	background-color: #3E4651;
+	border          : none;
 }
 
 .navbar{
@@ -39,6 +43,7 @@ footer{
 		text-decoration: none;
 		font-size      : 1.2em;
 		font-family    : 'Roboto', sans-serif;
+
 	}
 	li a{
 		color: #FFFFFF;
@@ -51,12 +56,12 @@ footer{
 		transition        : color 800ms;
 	}
 	li a:hover{
-		background-color: #D4D4D4;
-		color           : #00B5B5;
+		background-color: #F1654C;
+		color           : #3E4651;
 	}
 	li a:visited:hover{
-		background-color: #D4D4D4;
-		color           : #00B5B5;
+		background-color: #F1654C;
+		color           : #3E4651;
 	}
 }
 
@@ -75,6 +80,20 @@ footer{
 		color           : #00B5B5;
 		background-color: #3E4651;
 	}
+}
+
+#login-btn{
+	color: #00B5B5;
+}
+
+#login-btn:hover{
+	background-color: #515862;
+}
+
+
+#logout-btn:hover{
+	background-color: #00B5B5;
+	color           : #3E4651;
 }
 
 .navbar-toggle{
