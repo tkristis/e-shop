@@ -1,6 +1,8 @@
+<% if signed_in? && current_user.admin? %>
+<%= link_to 'New Product', new_product_path %>
+<% end %>
 
-<h1>Listing products</h1>
-
+<h1 id="listing-products">Listing products</h1>
 
 <div class="container-fluid">
   <div class="row">
@@ -12,6 +14,3 @@
 
 <br>
 
-<% if signed_in? && current_user.admin? %>
-<%= link_to 'New Product', new_product_path %>
-<% end %>
