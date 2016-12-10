@@ -168,6 +168,10 @@ h1{
 	transition        : 0.6s ease-in-out left;
 }
 
+.carousel-indicators .active{
+	background-color: #323232;
+}
+
 /**** Media Query ****/
 @media (min-width: 320px) and (max-width: 425px){
 	.carousel-caption{
