@@ -1,3 +1,8 @@
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+<% end %>
+      
 <div class="container show-product">
   <div class="row">
 
@@ -40,11 +45,6 @@
       <%= form_tag "/payments/create" do %>
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
-      <% end %>
-
-      <% if signed_in? && current_user.admin? %>
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Back', products_path %>
       <% end %>
 
     </div>

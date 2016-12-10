@@ -25,10 +25,13 @@ $(document).on('turbolinks:load', function(){
   $('.img-zoom').click(function(){
    if($(window).width()>768){
         $(this).elevateZoom({
-            zoomWindowPosition:1,
-            zoomWindowOffetx: 5,
-            zoomWindowWidth:$(this).width(), 
-            zoomWindowHeight:$(this).height(),
+          zoomWindowPosition:1,
+          zoomWindowOffetx: 5,
+          zoomWindowWidth:$(this).width(), 
+          zoomWindowHeight:$(this).height(),
+          zoomType: "inner",
+          cursor  : "crosshair",
+          easing: "true",
         }); 
     }
     else{
