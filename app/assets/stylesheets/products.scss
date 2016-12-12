@@ -41,7 +41,7 @@ span.product-img-text {
 	height            : 70px;
 	width             : 100%;
 	left              : 0; 
-	right             :0;
+	right             :	0;
 	bottom            : 0; 
 	opacity           : 0;
 	-webkit-transition: opacity 500ms;
@@ -51,7 +51,7 @@ span.product-img-text {
 }
 
 .product-img-list:hover span.product-img-text {
-    opacity: 1;
+  opacity: 1;
 }
 
 span.product-img-text span {

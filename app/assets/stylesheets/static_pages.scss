@@ -170,6 +170,12 @@ h1{
 
 .carousel-indicators .active{
 	background-color: #323232;
+	width: 12.5px;
+	height: 12.5px;
+}
+
+.carousel-indicators li{
+	background-color: #FFFFFF;
 }
 
 /**** Media Query ****/
