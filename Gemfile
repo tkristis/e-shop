@@ -78,3 +78,5 @@ end
   gem 'redis-rails'
 
   gem 'newrelic_rpm'
+
+  gem "figaro"
