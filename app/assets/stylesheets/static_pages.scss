@@ -82,7 +82,7 @@ h1{
 		text-decoration: none;
 	}
 	a:hover{
-		color           : #00B5B5;
+		color           : #F1654C;
 		background-color: #3E4651;
 	}
 	a:visited:hover{
@@ -193,9 +193,6 @@ h1{
 	footer{
 		position: relative;
 	}
-}
-
-@media (min-width: 320px) and (max-width: 766px){
 	#email-submit-button{
 		width : 300px;
 		margin: 20px auto;	
@@ -222,15 +219,6 @@ h1{
 	#nav-form-control{
 		width : 70%;
 		margin: 0 auto 15px auto;
-	}
-}
-
-@media (min-width: 766px) and (max-width: 788px){
-	.navbar li {
-		font-size: 0.9em;
-	}
-	.projectName{
-		font-size: 1.1em;
 	}
 }
 
