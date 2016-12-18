@@ -4,7 +4,7 @@
 <% end %>
       
 <div class="container show-product">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
 
     <div class="col-md-6 col-xs-12 show-product-left">
       <%= image_tag(@product.image_url, class: "img-zoom img-responsive", id: "product-img", data_zoom_image: "true") %>
@@ -48,9 +48,7 @@
       <% end %>
 
     </div>
-  </div>
   
-  <div class="row">
 
     <div class="col-md-8 comment-rate-product">
 
