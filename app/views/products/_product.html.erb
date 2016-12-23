@@ -12,7 +12,7 @@
   
   <p id="product-description"><%= truncate product.description, length: 100 %></p>
       
-  <% if signed_in? && current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <ul>
       <li><%= link_to 'Show', product %></li>
       <li><%= link_to 'Edit', edit_product_path(product) %></li>
