@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -11,12 +12,13 @@ Rails.application.routes.draw do
 
   root 'static_pages#landing_page'
 
-
   devise_for :users
   
   resources :products do
     resources :comments
   end
+
+  resources :categories
   
   resources :users
   
