@@ -1,32 +1,54 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <% @products.each_with_index do |product, index| %>
-    <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class=<%= "active" if index == 0 %>></li>      
-  	<% end %> 
-  </ol>   
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <% @products.each do |product| %>
-    <div class="item<%= " active" if product == @products.first %>">
-      <%= link_to product_path(product) do %>
-      <%= image_tag(product.image_url, class: "img-responsive") %> 
-      <% end %>
-      <div class="carousel-caption">
-        <%= product.name %>
+<div class="container">
+  <div class="banner">
+    <div class="banner-bottom">
+      <div class="banner-bottom-top">
+        <h1>You made a good choice choosing us!</h1>
       </div>
-     </div>
-   <% end %>
+    </div>
+    <div class="shop">
+      <%= link_to "WATCH OUR PRODUCTS NOW", products_path %>
+    </div>
   </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+
+<div class="container">
+  <div class="main-content">
+    <div class="online-strip">
+      <div class="col-md-4 follow-us">
+        <h3>follow us : <a class="twitter" href="#"></a><a class="facebook" href="#"></a></h3>
+      </div>
+      <div class="col-md-4 shipping-grid">
+        <div class="shipping">
+          <%= image_tag "shipping.png", class: "img-responsive" %>
+        </div>
+        <div class="shipping-text">
+          <h3>Free Shipping</h3>
+          <p>for orders over &pound; 30</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 online-order">
+        <p>Order online</p>
+        <h3>Tel: 01733 898108</h3>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<section class="latest-product">
+  <div class="container">
+    <center><h1>Latest products</h1></center>
+    <div class="row">
+      <% @products.each_with_index do |product, index| %>
+      <% end %> 
+      <% @products.each do |product| %>
+        <%= link_to product_path(product) do %>
+        <div class="col-md- 3 col-md-3 col-sm-6 col-xs-12 img">
+          <%= image_tag product.image_url, class: "img-responsive" %> 
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>

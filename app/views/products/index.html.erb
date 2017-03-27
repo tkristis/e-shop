@@ -1,15 +1,13 @@
-<% if signed_in? && current_user.admin? %>
-<%= link_to 'New Product', new_product_path %>
-<% end %>
-
-<h1 id="listing-products">Listing products</h1>
-
-<div class="container-fluid">
+<div class="container">
+  <center><h1 id="listing-products">Listing products</h1></center>
   <div class="row">
     <% cache(cache_key_for_products) do %>
-    <%= render @products %>
+      <%= render @products %>
     <% end %>
   </div>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path %>
+  <% end %>
 </div>
 
 <br>

@@ -15,32 +15,32 @@
         <strong>Name:</strong>
         <%= @product.name %>
       </p>
-
+      <br>
       <p>
         <strong>Description:</strong>
         <%= @product.description %>
       </p>
-
+      <br>
       <p>
         <strong>Year of manufacture:</strong>
         <%= @product.year_of_manufacture %>
       </p>
-
+      <br>
       <p>
         <strong>Color:</strong>
         <%= @product.color %>
       </p>
-
+      <br>
       <p>
         <strong>Price:</strong><i class="glyphicon glyphicon-usd"></i>
         <%= @product.price %>
       </p>
-
+      <br>
       <p>
         <strong>Average Rating:</strong> 
         <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></div> 
       </p>
-
+      <br>
       <!-- Payment button -->
       <%= form_tag "/payments/create" do %>
       <%= render partial: "shared/stripe_checkout_button" %>
@@ -56,6 +56,7 @@
       <p><%= render partial: 'new_comment' %></p>
       <p><%= render partial: 'comments' %></p>
       
+      <br><br>
       <div class="digg_pagination">
         <div class="page_info">
           <%= page_entries_info @comments %>

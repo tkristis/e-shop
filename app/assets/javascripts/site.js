@@ -21,23 +21,10 @@ $(document).on('turbolinks:load', function(){
     easing: "true"
   }); 
 
-  // Disable image zoom to width 768px
-  $('.img-zoom').click(function(){
-   if($(window).width()>768){
-        $(this).elevateZoom({
-          zoomWindowPosition:1,
-          zoomWindowOffetx: 5,
-          zoomWindowWidth:$(this).width(), 
-          zoomWindowHeight:$(this).height(),
-          zoomType: "inner",
-          cursor  : "crosshair",
-          easing: "true",
-        }); 
-    }
-    else{
-        $.removeData($(this), 'elevateZoom');//remove zoom instance from image
-        $('.zoomContainer').remove(); // remove zoom container from DOM
-        return false;
-    }
+  $('#carousel').slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  prevArrow: false,
+  nextArrow: false
 });
 });
