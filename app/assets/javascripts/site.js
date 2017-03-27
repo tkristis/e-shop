@@ -20,11 +20,4 @@ $(document).on('turbolinks:load', function(){
     cursor  : "crosshair",
     easing: "true"
   }); 
-
-  $('#carousel').slick({
-  autoplay: true,
-  autoplaySpeed: 2000,
-  prevArrow: false,
-  nextArrow: false
-});
 });

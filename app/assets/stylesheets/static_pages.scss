@@ -75,12 +75,12 @@ header{
   .btn-primary{
     color: #4CAF50;
     background-color: #F1F8E9;
-    border: 1px solid #f8f8f8;
+    border: none;
   }
   .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:visited{
     background-color: #C5E1A5;
     color: #ffffff;
-    border: 1px solid #f8f8f8;
+    border: none;
   }
   input{
     display: none;
