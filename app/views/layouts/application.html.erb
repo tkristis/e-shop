@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chopper shop</title>
+  <title>Vape shop</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -76,6 +76,9 @@
             <li><%= link_to "PRODUCTS", products_path %> </li>
             <li><%= link_to "FAQ", static_pages_about_path %></li>
             <li><%= link_to "CONTACT", static_pages_contact_path %></li>
+            <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
+            <li><%= link_to "MODS", category_path(id: 2) %></li>
+            <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
           </ul>
         </div>
         <!--/.navbar-collapse-->
