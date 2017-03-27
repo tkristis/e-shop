@@ -11,6 +11,7 @@
   </div>
   
   <p id="product-description"><%= truncate product.description, length: 100 %></p>
+  <td><%= link_to product.category.name, category_path(product.category) %></td>
       
   <% if current_user && current_user.admin? %>
     <ul>

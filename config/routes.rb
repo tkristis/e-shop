@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
   post 'payments/create'
 
   root 'static_pages#landing_page'
-
 
   devise_for :users
   
