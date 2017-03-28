@@ -74,11 +74,11 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "HOME", static_pages_landing_page_path%></li>
             <li><%= link_to "PRODUCTS", products_path %> </li>
-            <li><%= link_to "FAQ", static_pages_about_path %></li>
             <li><%= link_to "CONTACT", static_pages_contact_path %></li>
             <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
             <li><%= link_to "MODS", category_path(id: 2) %></li>
             <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
+            <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
           </ul>
         </div>
         <!--/.navbar-collapse-->
@@ -95,10 +95,35 @@
   <p id="alert" class="alert alert-danger"><%= alert %></p>
   <% end %>
 
-
   <%= yield %>
   <footer>
     <div class="container">
+      <div class="footer-links">
+        <div class="row">
+          <div class="col-md-4 col-xs-6 links">
+            <h5>ABOUT</h5>
+            <ul>
+              <li><%= link_to "Contact Us", static_pages_about_path %></li>
+              <li><%= link_to "Faq", static_pages_about_path %></li>
+              <li><%= link_to "Our Story", static_pages_about_path %></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-xs-6 links">
+            <h5>ACCOUNT</h5>
+            <ul>
+              <li><%= link_to "Create an Account", static_pages_about_path %></li>
+              <li><%= link_to "Manage Your Account", static_pages_about_path %></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-xs-6 links">
+            <h5>WHOLESALE</h5>
+            <ul>
+              <li><%= link_to "Register a Shop", static_pages_about_path %></li>
+              <li><%= link_to "Purchase Flavors", static_pages_about_path %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="cards text-center">
         <%= image_tag("cards.jpg", class: "img-responsive") %>
       </div>
