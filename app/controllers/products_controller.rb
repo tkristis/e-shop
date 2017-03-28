@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+    @products = Product.page(params[:page]).per_page(100).all.order('id desc')
   end
   
   # GET /products/1

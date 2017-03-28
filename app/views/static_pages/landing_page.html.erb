@@ -44,7 +44,7 @@
       <% end %> 
       <% @products.each do |product| %>
         <%= link_to product_path(product) do %>
-        <div class="col-md- 3 col-md-3 col-sm-6 col-xs-12 img">
+        <div class="col-md-3 col-md-3 col-sm-6 col-xs-12 img">
           <%= image_tag product.image_url, class: "img-responsive" %> 
         </div>
         <% end %>

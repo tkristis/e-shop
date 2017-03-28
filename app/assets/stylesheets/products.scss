@@ -5,106 +5,149 @@
 ul li{
 	display: block-inline;
 }
-/********
- 	Products list page
- *******/
+/************************
+*************************
+PRODUCTS LIST PAGE ADMIN
+*************************
+************************/
+.product-list{
+	color: #333;
+	margin: 50px 0;
+	letter-spacing: 1px;
+	line-height: 1.6;
+	tbody{
+		border: 1px solid #333;
+	}
+	h1{
+		padding-bottom: 20px;
+	}
+	table{
+		width: 100%;
+	}
+	td{
+		padding: 5px 0 ;
+	}
+	.list-name{
+		padding-left: 10px;
+	}
+	.product-control{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.category{
+		color: purple;
+	}
+	.show{
+		color: blue;
+	}
+	.delete{
+		color: red;
+	}
+	.edit{
+		color: green;
+	}
+	.new-product{
+		text-align: center;
+		margin: 20px 0;
+		border: 1px solid #333;
+		color: #333;
+		font-weight: bold;
+		padding: 10px;
+		display: inline-block;
+	}
+}
+/************************
+*************************
+PRODUCTS LIST PAGE USER
+*************************
+************************/
 .products{
 	padding-top: 30px;
-	padding-bottom: 30px
+	padding-bottom: 30px;
+	h1{
+		padding: 20px 0 50px 0;
+	}
+	#listing-products{
+		padding-top: 40px;
+	}
+	#product-name{
+		font-size  : 1.5em;
+		font-family: 'Source Sans Pro', sans-serif;
+		height     : 40px;
+		text-align : center;
+	}
+	.product-img-list {
+		position       : relative;
+		list-style-type: none;
+		margin         : 0;
+		padding        : 0;
+		text-align     : center;
+	}
+	.product-img-list img{
+		height: 200px;
+	}
+	span.product-img-text {
+		background        : #ffffff;
+		color             : white;
+		cursor            : pointer;
+		display           : table;
+		position          : absolute;
+		height            : 200px;
+		width             : 60%;
+		margin            : 0 auto;
+		left              : 0; 
+		right             :	0;
+		bottom            : 0; 
+		opacity           : 0;
+		-webkit-transition: all 0.5s linear;;
+		-moz-transition   : all 0.5s linear;;
+		-o-transition     : all 0.5s linear;;
+		transition        : all 0.5s linear;;
+	}
+	.product-img-list:hover span.product-img-text {
+		opacity: 0.8;
+	}
+	span.product-img-text span {
+		display       : table-cell;
+		text-align    : center;
+		vertical-align: middle;
+	}
+	.product-img-text h4{
+		color      : #333;
+		font-size  : 2em;
+	} 
+	#product-description{
+		padding-top: 15px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size  : 1.15em;
+	}
 }
-
-#listing-products{
-	padding-top: 40px;
-}
-
-#product-name{
-	font-size  : 1.5em;
-	font-family: 'Source Sans Pro', sans-serif;
-	height     : 40px;
-	text-align : center;
-}
-
-.product-img-list {
-	position       : relative;
-	list-style-type: none;
-	margin         : 0;
-	padding        : 0;
-	text-align     : center;
-}
-.product-img-list img{
-	height: 200px;
-}
-
-span.product-img-text {
-	background        : #ffffff;
-	color             : white;
-	cursor            : pointer;
-	display           : table;
-	position          : absolute;
-	height            : 200px;
-	width             : 60%;
-	margin            : 0 auto;
-	left              : 0; 
-	right             :	0;
-	bottom            : 0; 
-	opacity           : 0;
-	-webkit-transition: all 0.5s linear;;
-	-moz-transition   : all 0.5s linear;;
-	-o-transition     : all 0.5s linear;;
-	transition        : all 0.5s linear;;
-}
-
-.product-img-list:hover span.product-img-text {
-  opacity: 0.8;
-}
-
-span.product-img-text span {
-	display       : table-cell;
-	text-align    : center;
-	vertical-align: middle;
-}
-
-.product-img-text h4{
-	color      : #333;
-	font-size  : 2em;
-} 
-
-#product-description{
-	padding-top: 15px;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size  : 1.15em;
-}
-
-/********
-	Show product page
-********/
+/************************
+*************************
+		SHOW PRODUCT PAGE
+*************************
+************************/
 .show-product{
 	padding-top: 60px;
 	padding-bottom: 60px;
 	font-size  : 1.15em;
 }
-
 .show-product-right{
 	padding   : 15px 0 15px 0;
 	text-align: left;
 }
-
 #product-img{
 	width: 80%;
 }
-
 .glyphicon-usd{
 	padding-left: 5px;
 }
-
 .comment-rate-product{
 	padding: 40px 0 0 67px;
 }
-
 .product-reviews{
 	padding-left: 15px;
 }
-
 /************************
 *************************
 			NEW PRODUCT
@@ -120,9 +163,11 @@ span.product-img-text span {
 	}
 }
 
-/********
-	Media query
-********/
+/************************
+*************************
+			MEDIA QUERY
+*************************
+************************/
 @media (min-width: 320px) and (max-width: 425px){
 	.show-product-right p{
 		line-height   : 1.6;

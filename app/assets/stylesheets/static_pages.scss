@@ -310,8 +310,11 @@ header{
 *********************/
 .latest-product{
 	margin: 30px 0;
+  .img{
+    padding: 15px 0;
+  }
 	h1{
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		color: #7CB342;
 		font-weight: bold;
 	}

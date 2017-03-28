@@ -1,23 +1,23 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
-
-  <center><h1><%= @category.name %></h1></center>
-  <% Product.where(category_id: @category.id).each do |product| %>
-  <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 products">
-    <div class="product-block">
-      <div class="product-img-list">
-        <h3 id="product-name"><%= product.name %></h3>
-        <%= link_to product_path(product), class: 'product_link' do %>
-        <span class="product-img-text"><span><h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4></span></span>
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <% end %>
+<div class="products">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <center><h1><%= @category.name %></h1></center>
+    <% Product.where(category_id: @category.id).each do |product| %>
+    <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12">
+      <div class="product-block">
+        <div class="product-img-list">
+          <h3 id="product-name"><%= product.name %></h3>
+          <%= link_to product_path(product), class: 'product_link' do %>
+          <span class="product-img-text"><span><h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4></span></span>
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+          <% end %>
+        </div>
+        <p id="product-description"><%= truncate product.description, length: 100 %></p>
       </div>
-      <p id="product-description"><%= truncate product.description, length: 100 %></p>
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_category_path(@category), class: "edit" %>
+      <% end %>
     </div>
+    <% end %>
   </div>
-  <% end %>
-
-
-  <%= link_to 'Edit', edit_category_path(@category) %> |
-  <%= link_to 'Back', categories_path %>
 </div>
