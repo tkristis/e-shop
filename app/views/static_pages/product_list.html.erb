@@ -1,0 +1,33 @@
+<% if signed_in? && current_user.admin? %>
+<div class="product-list-admin">
+  <div class="container">
+    <table>
+     <thead>
+      <tr>
+        <th class="list-name">Name</th>
+        <th class="list-price">Price</th>
+        <th>ID</th>
+        <th class="list-category">Category</th>
+      </tr>
+    </thead>
+    <% @products.each_with_index do |product, index| %>
+    <% end %> 
+    <% @products.each do |product| %>
+    <%= link_to product_path(product) do %>
+    <tbody>
+      <tr>
+        <td class="list-name"><%= product.name %></td>
+        <td class="list-price">&dollar;<%= product.price %></td>
+        <td><%= product.id %></td>
+        <td class="list-category"><%= link_to Category.find(product.category_id).name, category_path(product.category_id), class: "category" %></td>
+        <td class="product-control"><%= link_to 'Show', product, class: "show" %></td>
+        <td class="product-control"><%= link_to 'Edit', edit_product_path(product), class: "edit" %></td>
+        <td class="product-control"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'}, class: "delete" %></td>
+      </tr>
+    </tbody>
+    <% end %>
+    <% end %>
+    </table>
+  </div>
+</div>
+<% end %>

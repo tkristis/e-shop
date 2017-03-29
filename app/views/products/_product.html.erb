@@ -1,13 +1,15 @@
 <% cache product do %>
-<tbody>
-  <tr>
-    <td class="list-name"><%= product.name %></td>
-    <td class="list-price">&dollar;<%= product.price %></td>
-    <td class="list-category"><%= link_to Category.find(product.category_id).name, category_path(product.category_id), class: "category" %></td>
-    <td class="product-control"><%= link_to 'Show', product, class: "show" %></td>
-    <td class="product-control"><%= link_to 'Edit', edit_product_path(product), class: "edit" %></td>
-    <td class="product-control"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'}, class: "delete" %></td>
-  </tr>
-</tbody>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+  <div class="product-block">
+    <div class="product-img-list">
+      <h3 id="product-name"><%= product.name %></h3>
+      <%= link_to product_path(product), class: 'product_link' do %>
+      <span class="product-img-text"><span><h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4></span></span>
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+      <% end %>
+    </div>
+    <p id="product-description"><%= truncate product.description, length: 100 %></p>
+  </div>
+</div>
 <% end %>
 

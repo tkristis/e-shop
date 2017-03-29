@@ -2,9 +2,13 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
+  get 'static_pages/faq'
+
   get 'static_pages/contact'
 
   get 'static_pages/landing_page'
+
+  get 'static_pages/product_list'
 
   post 'static_pages/thank_you'
 

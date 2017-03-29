@@ -73,12 +73,24 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to "HOME", static_pages_landing_page_path%></li>
-            <!--<li><%= link_to "PRODUCTS", products_path %> </li> -->
+            <li class="dropdown">
+              <a><% link_to products_path, data_toggle: "dropdown", class: "dropdown-toggle" %> ALL PRODUCTS <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
+                <li><%= link_to "MODS", category_path(id: 2) %></li>
+                <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
+                <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a><% link_to "#", data_toggle: "dropdown", class: "dropdown-toggle" %> ADMIN CONTROL <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "CATEGORIES", categories_path %></li>
+                <li><%= link_to "NEW CATEGORY", new_category_path %></li>
+                <li><%= link_to "NEW PRODUCT", new_product_path %></li>
+              </ul>
+            </li>
             <li><%= link_to "CONTACT", static_pages_contact_path %></li>
-            <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
-            <li><%= link_to "MODS", category_path(id: 2) %></li>
-            <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
-            <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
           </ul>
         </div>
         <!--/.navbar-collapse-->
@@ -104,7 +116,7 @@
             <h5>ABOUT</h5>
             <ul>
               <li><%= link_to "Contact Us", static_pages_about_path %></li>
-              <li><%= link_to "Faq", static_pages_about_path %></li>
+              <li><%= link_to "Faq", static_pages_faq_path %></li>
               <li><%= link_to "Our Story", static_pages_about_path %></li>
             </ul>
           </div>
@@ -119,7 +131,7 @@
             <h5>WHOLESALE</h5>
             <ul>
               <li><%= link_to "Register a Shop", static_pages_about_path %></li>
-              <li><%= link_to "Purchase Flavors", static_pages_about_path %></li>
+              <li><%= link_to "Purchase Flavors", category_path(id: 1) %></li>
             </ul>
           </div>
         </div>

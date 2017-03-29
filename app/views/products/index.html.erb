@@ -1,27 +1,11 @@
-<% if signed_in? && current_user.admin? %>
-<div class="product-list">
+<div class="products">
   <div class="container">
-    <center><h1 id="listing-products">All products</h1></center>
-      <%= link_to 'New Product', new_product_path, class: "new-product" %>
-    <table>
-      <thead>
-      <tr>
-        <th class="list-name">Name</th>
-        <th class="list-price">Price</th>
-        <th class="list-category">Category</th>
-      </tr>
-    </thead>
+    <center><h1>All products</h1></center>
+    <%= link_to 'New Product', new_product_path, class: "new-product" %>
+    <div class="row">
       <% cache(cache_key_for_products) do %>
       <%= render @products %>
       <% end %>
-    </table>
-    <br><br>
-      <div class="digg_pagination">
-        <div class="page_info">
-          <%= page_entries_info @products %>
-        </div>
-        <%= will_paginate @products, :container => false %>
-      </div>
+    </div>
   </div>
 </div>
-<% end %>

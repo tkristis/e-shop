@@ -6,6 +6,9 @@ class StaticPagesController < ApplicationController
     @products = Product.limit(8)
   end
 
+  def product_list
+    @products = Product.all
+  end
   #Email
   def thank_you
     @name = params[:name]

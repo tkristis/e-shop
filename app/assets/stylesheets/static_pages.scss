@@ -73,7 +73,7 @@ header{
 		margin-right: 5px;
 	}
   .btn-primary{
-    color: #4CAF50;
+    color: #8BC34A;
     background-color: #F1F8E9;
     border: none;
   }
@@ -180,6 +180,20 @@ header{
 		vertical-align: middle;
 		margin-right: 3px;
 	}
+  .dropdown-menu{
+    right: 0;
+  }
+  .dropdown.open{
+    z-index: 1;
+    overflow: visible;
+  }
+  .dropdown{
+    z-index: 1;
+    overflow: visible;
+  }
+  .dropdown a{
+    padding: 10px 20px;
+  }
 }
 /************************
 *************************
@@ -311,7 +325,7 @@ header{
 .latest-product{
 	margin: 30px 0;
   .img{
-    padding: 15px 0;
+    padding: 30px 0;
   }
 	h1{
 		padding-bottom: 30px;
@@ -321,6 +335,7 @@ header{
 	img{
 		margin: 0 auto;
 		height: 200px;
+    width: 190px;
 		opacity: 1;
 	}
 	img:hover{
@@ -332,10 +347,10 @@ header{
 }
 /************************
 *************************
-				ABOUT
+				FAQ
 *************************
 ************************/
-.about{
+.faq{
 	padding: 40px 0;
 	text-align: left;
 	letter-spacing: 1.5px;
@@ -411,6 +426,57 @@ header{
 		text-decoration: none;
 		border: none;
 	}
+}
+/************************
+*************************
+PRODUCTS LIST PAGE ADMIN
+*************************
+************************/
+.product-list-admin{
+  color: #333;
+  margin: 50px 0;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  tbody{
+    border: 1px solid #333;
+  }
+  h1{
+    padding-bottom: 20px;
+  }
+  table{
+    width: 100%;
+  }
+  td{
+    padding: 5px 0 ;
+  }
+  .list-name{
+    padding-left: 10px;
+  }
+  .product-control{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .category{
+    color: purple;
+  }
+  .show{
+    color: blue;
+  }
+  .delete{
+    color: red;
+  }
+  .edit{
+    color: green;
+  }
+  .new-product{
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid #333;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+  }
 }
 /************************
 *************************
@@ -683,6 +749,19 @@ footer{
   		width: 80%;
   	}
   }
+  .faq{
+    h1{
+      font-size: 1.7em;
+    }
+    h4{
+      margin: 0 50px;
+      font-size: 1.2em;
+    }
+    p{
+      margin        : 0 50px;
+      font-size     : 1em;
+    }
+  }
   footer{
     .footer-links{
       width: inherit;
@@ -690,26 +769,36 @@ footer{
   }
 }
 @media screen and (max-width: 640px) {  
-  .navbar-header {
-    width: 100%;
-  }
-  .navbar {
-    border: none;
-  }
-  .navbar-nav {
-    margin: 10px 0;
-    width: 100%;
-    text-align: center;
-    margin-right:0;
-  }
-  .navbar-default .navbar-nav > li > a {
-    margin: 5px 0px;
-  }
-  .navbar-header {
-    float: none;
-  }
-  .navbar-collapse.collapse {
-    margin-top: 10px;
+  .banner-top{
+    .navbar-header {
+      width: 100%;
+    }
+    .navbar {
+      border: none;
+    }
+    .navbar-nav {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+      margin-right:0;
+    }
+    .navbar-default .navbar-nav > li > a {
+      margin: 5px 0px;
+    }
+    .navbar-header {
+      float: none;
+      width: 100%;
+    }
+    .navbar-collapse.collapse {
+      margin-top: 10px;
+    }
+    .navbar-toggle{
+      float: right;
+      width: initial;
+    }
+    .logo{
+      width: 50%;
+    }
   }
   .banner {
     min-height: 304px;
@@ -810,6 +899,19 @@ footer{
       margin-top: 15px;
     } 
   }
+  .faq{
+    h1{
+      font-size: 1.6em;
+    }
+    h4{
+      margin: 0 20px;
+      font-size: 1.2em;
+    }
+    p{
+      margin        : 0 20px;
+      font-size     : 1em;
+    }
+  }
 }
 @media screen and (max-width: 320px) {  
   .header-top-left {
@@ -889,6 +991,20 @@ footer{
     }
     .follow-us, .online-order {
       margin-top: 0;
+    }
+  }
+    .faq{
+    h1{
+      font-size: 1.3em;
+    }
+    h4{
+      margin: 0 5px;
+      font-size: 1.1em;
+    }
+    p{
+      margin: 0;
+      font-size: 1em;
+      text-align: justify;
     }
   }
 }

@@ -12,7 +12,7 @@ var refreshRating = function() {
 };
 
 $(document).on('turbolinks:load', function(){
-    refreshRating();
+  refreshRating();
 
   // Product image zoom 
   $('.img-zoom').elevateZoom({
@@ -20,4 +20,10 @@ $(document).on('turbolinks:load', function(){
     cursor  : "crosshair",
     easing: "true"
   }); 
+
+  $('ul.nav li.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+  }, function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+  });
 });
