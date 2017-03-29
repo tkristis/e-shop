@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   #These settings are for the sending out email for active admin and consequently the devise mailer
-  config.action_mailer.default_url_options = { :host => 'choppers.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'vapeclouds.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
