@@ -183,6 +183,10 @@ header{
   .dropdown-menu{
     right: 0;
   }
+  .dropdown-menu>li>a:hover {
+    color: #9CCC65;
+    background-color: #ffffff;
+  }
   .dropdown.open{
     z-index: 1;
     overflow: visible;
@@ -544,6 +548,79 @@ footer{
     font-size: 16px;
   }
 }
+/********************
+*********************
+  FIXED NAVIGATION
+*********************
+********************/
+@media screen and (min-width: 1024px){
+  .fixed-menu{
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    color: green;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 3px 12px #d8d8d8;
+    letter-spacing: 1px;
+    .logo-left{
+      width: 20%;
+      float: left;
+      font-family: 'Patua One';
+      height: 57px;
+    }
+    h1 {
+      color: #333;
+      text-decoration: none;
+      font-size: 25px;
+      letter-spacing: 2px;
+      float: left;
+      line-height: 57px;
+      padding-left: 10px;
+    }
+    h2{
+      font-size: 25px;
+      float: left;
+      line-height: 57px;
+      padding-left: 20px;
+    }
+    .nav-right{
+      width: 80%;
+      float: right;
+    }
+    li > a{
+      color: #7CB342;
+      text-transform: uppercase;
+      padding: 20px;  
+      line-height: 57px; 
+      font-weight: bold; 
+    }
+    li{
+      transform: none;
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      display: inline-block;
+      font-size: 1.1em;
+      height: 57px;
+    }
+    li a:hover, li a:focus{
+      transform: none;
+      background-color: #7CB342;
+      border: none;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}
 @media screen and (max-width: 1024px) { 
   .header-top-strip {
     padding: 6px 0 12px 0;
@@ -590,6 +667,9 @@ footer{
   }
 }
 @media screen and (max-width: 990px){
+  .nav.fixed-menu{
+    display: none!important;
+  }
   .banner-bottom-top{
   	margin-top: 0;
   }
@@ -795,6 +875,7 @@ footer{
     .navbar-toggle{
       float: right;
       width: initial;
+      overflow: visible;
     }
     .logo{
       width: 50%;

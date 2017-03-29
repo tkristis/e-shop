@@ -26,10 +26,12 @@
         <%= @product.year_of_manufacture %>
       </p>
       <br>
+      <% if @product.respond_to?(:color) && @product.color.present? %>
       <p>
         <strong>Color:</strong>
         <%= @product.color %>
       </p>
+      <% end %>
       <br>
       <p>
         <strong>Price:</strong><i class="glyphicon glyphicon-usd"></i>

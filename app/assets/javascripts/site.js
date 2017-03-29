@@ -26,4 +26,12 @@ $(document).on('turbolinks:load', function(){
   }, function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
   });
+
+  $(window).scroll(function(){                          
+    if ($(this).scrollTop() > 180) {
+      $('.fixed-menu').fadeIn(500);
+    } else {
+      $('.fixed-menu').fadeOut(500);
+    }
+  });
 });
