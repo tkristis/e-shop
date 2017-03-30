@@ -28,7 +28,7 @@ $(document).on('turbolinks:load', function(){
   });
 
   $(window).scroll(function(){                          
-    if ($(this).scrollTop() > 180) {
+    if ($(this).scrollTop() > 200) {
       $('.fixed-menu').fadeIn(500);
     } else {
       $('.fixed-menu').fadeOut(500);

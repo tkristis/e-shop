@@ -1,6 +1,7 @@
 <% if signed_in? && current_user.admin? %>
 <div class="product-list-admin">
   <div class="container">
+    <center><h1>Product list</h1></center>
     <table>
      <thead>
       <tr>
@@ -17,7 +18,7 @@
     <tbody>
       <tr>
         <td class="list-name"><%= product.name %></td>
-        <td class="list-price">&dollar;<%= product.price %></td>
+        <td class="list-price">&pound;<%= product.price %></td>
         <td><%= product.id %></td>
         <td class="list-category"><%= link_to Category.find(product.category_id).name, category_path(product.category_id), class: "category" %></td>
         <td class="product-control"><%= link_to 'Show', product, class: "show" %></td>
@@ -28,6 +29,7 @@
     <% end %>
     <% end %>
     </table>
+    <%= link_to 'New Product', new_product_path, class: "new-product" %>
   </div>
 </div>
 <% end %>

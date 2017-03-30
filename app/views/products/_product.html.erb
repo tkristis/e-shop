@@ -1,15 +1,13 @@
 <% cache product do %>
 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
   <div class="product-block">
-    <div class="product-img-list">
-      <h3 id="product-name"><%= product.name %></h3>
-      <%= link_to product_path(product), class: 'product_link' do %>
-      <span class="product-img-text"><span><h4><i class="glyphicon glyphicon-usd"></i><%= product.price %></h4></span></span>
+    <h4 id="product-name"><%= product.name %></h4>
+    <%= link_to product_path(product), class: 'product_link' do %>
       <%= image_tag(product.image_url, class: "img-responsive") %>
-      <% end %>
+    <% end %>
+    <div class="price">
+      <h4>&pound; <%= product.price %></h4>
     </div>
-    <p id="product-description"><%= truncate product.description, length: 100 %></p>
   </div>
 </div>
 <% end %>
-

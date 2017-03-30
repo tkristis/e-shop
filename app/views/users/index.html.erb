@@ -1,30 +1,35 @@
+<% if signed_in? && current_user.admin? %>
+<div class="users-list-admin">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <center><h1>Users</h1></center>
+    <table>
+      <thead>
+        <tr>
+          <th class="list-first-name">First name</th>
+          <th class="list-last-name">Last name</th>
+          <th class="list-dob">DOB</th>
+          <th class="list-email">Email</th>
+          <th class="user-id">ID</th>
+        </tr>
+      </thead>
 
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.date_of_birth %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr class="border">
+          <td class="list-first-name"><%= user.first_name %></td>
+          <td class="list-last-name"><%= user.last_name %></td>
+          <td class="list-dob"><%= user.date_of_birth %></td>
+          <td class="list-email"><%= user.email %></td>
+          <td class="user-id"><%= user.id %></td>
+          <td><%= link_to 'Show', user, class: "show" %></td>
+          <td><%= link_to 'Edit', edit_user_path(user), class: "edit" %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete" %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'New User', new_user_path, class: "new-user" %>
+  </div>
+</div>
+<% end %>

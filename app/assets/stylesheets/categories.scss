@@ -1,3 +1,52 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/**************************
+***************************
+CATEGORIES LIST PAGE ADMIN
+***************************
+**************************/
+.categories-list-admin{
+  color: #333;
+  margin: 50px 0;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  .border{
+    border: 1px solid #333;
+  }
+  h1{
+    padding-bottom: 30px;
+  }
+  table{
+    width: 100%;
+  }
+  td{
+    padding: 5px 0 ;
+  }
+  .list-name{
+    padding-left: 10px;
+    color: purple;
+  }
+  .product-control{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .show{
+    color: blue;
+  }
+  .delete{
+    color: red;
+  }
+  .edit{
+    color: green;
+  }
+  .new-category{
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid #333;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+  }
+}

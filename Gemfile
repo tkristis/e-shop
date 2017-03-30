@@ -65,18 +65,12 @@ end
 
   ## Gemfile for Rails 3+, Sinatra, and Merb
   gem 'will_paginate', '~> 3.1.1'
-
+  gem 'will_paginate-bootstrap'
   gem 'rails-controller-testing'
-
   gem 'stripe'
-
   ## Security scanner 
   gem "brakeman", :require => false
-
   gem 'dalli'
-
   gem 'redis-rails'
-
   gem 'newrelic_rpm'
-
   gem "figaro"

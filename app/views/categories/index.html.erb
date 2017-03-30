@@ -1,33 +1,31 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
-
-  <h1>Categories</h1>
-
-  <table>
-    <thead>
+<% if signed_in? && current_user.admin? %>
+<div class="categories-list-admin">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <center><h1>Categories list</h1></center>
+    <table>
+     <thead>
       <tr>
-        <th>Name</th>
-        <th>Desc</th>
-        <th>ID</th>
-        <th colspan="3"></th>
+        <th class="list-name">Name</th>
+        <th class="list-desc">Desc</th>
+        <th class="list-id">ID</th>
       </tr>
     </thead>
-
     <tbody>
       <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= category.desc %></td>
-        <td><%= category.id %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr class="border">
+        <td class="list-name"><%= category.name %></td>
+        <td class="list-desc"><%= category.desc %></td>
+        <td class="list-id"><%= category.id %></td>
+        <td class="product-control"><%= link_to 'Show', category, class: "show" %></td>
+        <td class="product-control"><%= link_to 'Edit', edit_category_path(category), class: "edit" %></td>
+        <td class="product-control"><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?'}, class: "delete" %></td>
       </tr>
       <% end %>
     </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Category', new_category_path %>
+    </table>
+    <%= link_to 'New Category', new_category_path, class: "new-category" %>
+  </div>
 </div>
+<% end %>
+

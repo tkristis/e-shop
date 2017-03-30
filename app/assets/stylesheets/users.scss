@@ -2,16 +2,87 @@
   margin        : 0 auto;
   max-width     : 330px;
   padding-top   : 40px;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
+  h2{
+    padding-bottom: 5px;
+  }
+  .form-group{
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  a{
+    color: #333;
+  }
+  .btn-block{
+    background: #7CB342;
+    background-image: -webkit-linear-gradient(top, #7CB342, #AED581);
+    background-image: -moz-linear-gradient(top, #7CB342, #AED581);
+    background-image: -ms-linear-gradient(top, #7CB342, #AED581);
+    background-image: -o-linear-gradient(top, #7CB342, #AED581);
+    background-image: linear-gradient(to bottom, #7CB342, #AED581);
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding: 8px 0;
+    margin: 10px 0;
+  }
+  .btn-block:hover, .btn-block:active, .btn-block:focus {
+    background: #AED581;
+    background-image: -webkit-linear-gradient(top, #AED581, #7CB342);
+    background-image: -moz-linear-gradient(top, #AED581, #7CB342);
+    background-image: -ms-linear-gradient(top, #AED581, #7CB342);
+    background-image: -o-linear-gradient(top, #AED581, #7CB342);
+    background-image: linear-gradient(to bottom, #AED581, #7CB342);
+    text-decoration: none;
+    border: none;
+    border-color: transparent;
+  }
 }
-
-.confirmation{
-  margin     : 0 auto;
-  max-width  : 330px;
-  padding-top: 40px;
-}
-
-.confirmation h2{
-  padding-bottom: 20px;
+/**************************
+***************************
+  USERS LIST PAGE ADMIN
+***************************
+**************************/
+.users-list-admin{
+  color: #333;
+  margin: 50px 0;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  .border{
+    border: 1px solid #333;
+  }
+  h1{
+    padding-bottom: 30px;
+  }
+  table{
+    width: 100%;
+  }
+  td{
+    padding: 5px 0 ;
+  }
+  .list-first-name{
+    padding-left: 10px;
+  }
+  .show{
+    color: blue;
+  }
+  .delete{
+    color: red;
+  }
+  .edit{
+    color: green;
+  }
+  .new-user{
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid #333;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+  }
 }
 

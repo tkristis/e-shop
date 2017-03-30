@@ -10,68 +10,35 @@ PRODUCTS LIST PAGE USER
 .products{
 	padding-top: 30px;
 	padding-bottom: 30px;
+	text-align: center;
+	.product-block{
+		margin-bottom: 50px;
+		border: 3px solid #dfdfdf;
+		padding: 10px;
+		border-radius: 5px;
+	}
 	h1{
-		padding: 20px 0 50px 0;
+		padding: 20px 0 60px 0;
 	}
 	h4{
 		font-weight: bold;
+		font-size: 2em;
 	}
-	#listing-products{
-		padding-top: 40px;
+	.price{
+		color: #689F38;
+		margin: 10px 0;
 	}
 	#product-name{
-		font-size  : 1.5em;
-		font-family: 'Source Sans Pro', sans-serif;
-		height     : 40px;
-		text-align : center;
-	}
-	.product-img-list {
-		position       : relative;
-		list-style-type: none;
-		margin         : 0;
-		padding        : 0;
-		text-align     : center;
+		padding-top: 5px;
+		font-size: 1.4em;
+		height: 50px;
 	}
 	img{
 		height: 200px;
+		margin-bottom: 15px;
 	}
-	span.product-img-text {
-		background        : #ffffff;
-		color             : white;
-		cursor            : pointer;
-		display           : table;
-		position          : absolute;
-		height            : 200px;
-		width             : 60%;
-		margin            : 0 auto;
-		left              : 0; 
-		right             :	0;
-		bottom            : 0; 
-		opacity           : 0;
-		-webkit-transition: all 0.5s linear;;
-		-moz-transition   : all 0.5s linear;;
-		-o-transition     : all 0.5s linear;;
-		transition        : all 0.5s linear;;
-	}
-	.product-img-list:hover span.product-img-text {
+	img:hover{
 		opacity: 0.8;
-	}
-	span.product-img-text span {
-		display       : table-cell;
-		text-align    : center;
-		vertical-align: middle;
-	}
-	.product-img-text h4{
-		color      : #333;
-		font-size  : 2em;
-	} 
-	#product-description{
-		padding-top: 15px;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size  : 1.15em;
-	}
-	.glyphicon-usd{
-		color: green;
 	}
 }
 /************************
@@ -102,7 +69,7 @@ PRODUCTS LIST PAGE USER
 }
 /************************
 *************************
-			NEW PRODUCT
+		EDIT-NEW PRODUCT
 *************************
 ************************/
 .form-group{
@@ -113,6 +80,9 @@ PRODUCTS LIST PAGE USER
 	label{
 		text-align: left;
 	}
+}
+.product-header{
+	padding: 15px 0 25px 0;
 }
 
 /************************
