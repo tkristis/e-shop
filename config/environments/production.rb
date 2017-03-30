@@ -110,6 +110,6 @@ Rails.application.configure do
    :down_retry_delay => 60
  }
 
-  config.web_socket_server_url = "wss://choppers.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://choppers.herokuapp.com', 'http://choppers.herokuapp.com'] 
+  config.web_socket_server_url = "wss://vapeclouds.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://vapeclouds.herokuapp.com', 'http://vapeclouds.herokuapp.com'] 
 end
