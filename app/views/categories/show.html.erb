@@ -1,21 +1,9 @@
-<% cache do %>
 <div class="products">
   <div class="container">
-    <p id="notice"><%= notice %></p>
     <center><h1><%= @category.name %></h1></center>
-    <% Product.where(category_id: @category.id).each do |product| %>
-    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-      <div class="product-block">
-        <h4 id="product-name"><%= product.name %></h4>
-        <%= link_to product_path(product), class: 'product_link' do %>
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <% end %>
-        <div class="price">
-          <h4>&pound; <%= product.price %></h4>
-        </div>
-      </div>
+    <div class="row">
+      <%= render @products, cache: Proc.new{|item| [item, 'show']} %>
     </div>
-    <% end %>
+    <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
   </div>
 </div>
-<% end %>

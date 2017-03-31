@@ -32,10 +32,13 @@ ul{
   margin: 0 auto;
 }
 .form-control:focus {
-    border-color: #AED581;
-    outline: 0;
-    -webkit-box-shadow: 0 0 4px #9CCC65;
-    box-shadow: 0 0 4px #9CCC65;
+  border-color: #AED581;
+  outline: 0;
+  -webkit-box-shadow: 0 0 4px #9CCC65;
+  box-shadow: 0 0 4px #9CCC65;
+}
+#notice{
+  margin: 10px 0 0 0;
 }
 /************************
 *************************
@@ -249,10 +252,10 @@ header{
   color:#fff;
   font-size:18px;
   letter-spacing:2px;
-  border-radius: 4px;
-  -o-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 .shop:hover{
   transform: scale(1,1);
@@ -261,8 +264,6 @@ header{
   color:#fff;
   background-color:#558B2F;
   border:1px solid #558B2F;
-  box-shadow: 0 0 5px 1px #fff; 
-
 }
 /*********************
     ONLINE STRIP
@@ -466,8 +467,11 @@ PRODUCTS LIST PAGE ADMIN
     padding-left: 5px;
     padding-right: 5px;
   }
-  .category{
+  .list-category{
     color: purple;
+  }
+  .list-id{
+    color: black;
   }
   .show{
     color: blue;
@@ -495,12 +499,13 @@ PRODUCTS LIST PAGE ADMIN
 ************************/
 footer{
   padding: 40px 0 30px 0;
-  background-color: #F1F8E9;
-  color: #282828;
-  letter-spacing: 1px;
+  background-color: #689F38;
+  color: #ffffff;
+  letter-spacing: 0.5px;
   line-height: 1.6;
+  font-size: 15px;
   .footer-links{
-    width: 500px;
+    width: 600px;
     margin: 0 auto;
   }
   h5{
@@ -514,22 +519,21 @@ footer{
   }
   a{
     text-decoration: none;
-    color: #282828;
+    color: #ffffff;
   }
   a:hover{
-    color: #282828;
+    color: #ffffff;
   }
   img{
     margin: 0 auto;
   }
   .cards.text-center {
-    border-top: 1px solid #dfdfdf;
-    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
     margin: 40px 0;
     padding: 25px 0;
   }
   .copyright p {
-    font-size: 15px;
     font-weight: 400;
   }
 }
@@ -576,7 +580,7 @@ footer{
     background-color: #ffffff;
     z-index: 9999;
     display: none;
-    box-shadow: 0 3px 12px #dfdfdf;
+    box-shadow: 0 3px 12px #bdbdbd;
     letter-spacing: 1px;
     .logo-left{
       width: 20%;
@@ -612,10 +616,6 @@ footer{
     }
     li{
       transform: none;
-      transition: all 0.3s linear;
-      -webkit-transition: all 0.3s linear;
-      -moz-transition: all 0.3s linear;
-      -o-transition: all 0.3s linear;
       display: inline-block;
       font-size: 1.1em;
       height: 57px;
@@ -626,6 +626,10 @@ footer{
       border: none;
       color: #ffffff;
       text-decoration: none;
+      transition: all 0.35s linear;
+      -webkit-transition: all 0.35s linear;
+      -moz-transition: all 0.35s linear;
+      -o-transition: all 0.35s linear;
     }
   }
 }

@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def product_list
-    @products = Product.all
+    @products = Product.all.paginate(:page => params[:page], :per_page => 50)
   end
   #Email
   def thank_you

@@ -8,34 +8,63 @@ PRODUCTS LIST PAGE USER
 *************************
 ************************/
 .products{
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding: 30px 0;
 	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat';
 	.product-block{
-		margin-bottom: 50px;
-		border: 3px solid #dfdfdf;
-		padding: 10px;
+		background-color: #ececec;
+		margin: 0 auto 50px auto;
+		border: 1.5px solid #dcdcdc;
+		padding: 6px 0;
+		width: 212px;
 		border-radius: 5px;
+		-o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	}
 	h1{
 		padding: 20px 0 60px 0;
+		border-radius: 5px;
 	}
-	h4{
-		font-weight: bold;
+	h3{
+		padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
 		font-size: 2em;
+		background: #ffffff;
+		width: 200px;
+		border-radius: 5px;
+		-o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	}
 	.price{
+		margin-top: 6px;
 		color: #689F38;
-		margin: 10px 0;
 	}
 	#product-name{
-		padding-top: 5px;
-		font-size: 1.4em;
-		height: 50px;
+		font-size: 1.3em;
+		height: 70px;
+		padding: 20px 10px;
+		font-weight: bold;
+		width: 200px;
+    margin-bottom: 6px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	}
 	img{
 		height: 200px;
-		margin-bottom: 15px;
+		width: 200px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	}
 	img:hover{
 		opacity: 0.8;
@@ -49,20 +78,57 @@ PRODUCTS LIST PAGE USER
 .show-product{
 	padding-top: 60px;
 	padding-bottom: 60px;
-	font-size  : 1.15em;
+	letter-spacing: 1px;
+	line-height: 1.6;
+	font-family: 'Montserrat';
 }
 .show-product-right{
-	padding   : 15px 0 15px 0;
+	padding: 15px 0 15px 0;
 	text-align: left;
 }
 #product-img{
 	width: 80%;
 }
-.glyphicon-usd{
-	padding-left: 5px;
+.product-name{
+	margin-bottom: 15px;
+	font-weight: 600;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px;
+	border: 6px solid #f2f2f2;
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.product-description{
+	font-size: 1.1em;
+	margin-bottom: 15px;
+	padding: 20px;
+	border: 6px solid #f2f2f2;
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.product-payment{
+	text-align: center;
+	border: 6px solid #f2f2f2;
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 20px 0 25px 0;
+}
+.product-price{
+	font-weight: bold;
+	font-size: 2.5em;
+	color: #689F38;
+	margin-bottom: 15px;
 }
 .comment-rate-product{
 	padding: 40px 0 0 67px;
+	font-family: 'Lato';
 }
 .product-reviews{
 	padding-left: 15px;

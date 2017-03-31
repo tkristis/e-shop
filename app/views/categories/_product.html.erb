@@ -1,9 +1,11 @@
+<!--
 <% cache product do %>
+<% Product.where(category_id: @category.id).each do |product| %>
 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
   <div class="product-block">
     <h4 id="product-name"><%= product.name %></h4>
     <%= link_to product_path(product), class: 'product_link' do %>
-      <%= image_tag(product.image_url, class: "img-responsive") %>
+    <%= image_tag(product.image_url, class: "img-responsive") %>
     <% end %>
     <div class="price">
       <h3>&pound; <%= product.price %></h3>
@@ -11,3 +13,5 @@
   </div>
 </div>
 <% end %>
+<% end %>
+-->

@@ -7,12 +7,12 @@ class ProductsController < ApplicationController
     if params[:q].present?
       search_term = params[:q]
       if Rails.env.development?
-        @products = Product.where("name LIKE ?", "%#{search_term}%")
+        @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 20)
       else
-        @products = Product.where("name ilike ?", "%#{search_term}%")
+        @products = Product.where("name ilike ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 20)
       end
     else
-      @products = Product.all
+      @products = Product.all.paginate(:page => params[:page], :per_page => 20)
     end
   end
   

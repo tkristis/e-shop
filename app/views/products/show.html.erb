@@ -1,9 +1,9 @@
-<% if signed_in? && current_user.admin? %>
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
-<% end %>
-      
 <div class="container show-product">
+  <% if signed_in? && current_user.admin? %>
+  <p><%= link_to 'Edit', edit_product_path(@product) %></p>
+  <p>Product id: <%= @product.id %></p>
+  <% end %>
+
   <div class="row" data-product-id="<%= @product.id %>">
 
     <div class="col-md-6 col-xs-12 show-product-left">
@@ -11,42 +11,35 @@
     </div>
 
     <div class="col-md-6 col-xs-12 show-product-right">
-      <p>
-        <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
-      <br>
-      <p>
-        <strong>Description:</strong>
+      <h2 class="product-name">
+        <%= @product.name %> 
+      </h2>
+      <p class="product-description">
         <%= @product.description %>
       </p>
-      <br>
+      <% if @product.respond_to?(:flavors) && @product.flavors.present? %>
       <p>
-        <strong>Year of manufacture:</strong>
-        <%= @product.year_of_manufacture %>
-      </p>
-      <br>
-      <% if @product.respond_to?(:color) && @product.color.present? %>
-      <p>
-        <strong>Color:</strong>
-        <%= @product.color %>
+        <%= @product.flavors %>
       </p>
       <% end %>
-      <br>
-      <p>
-        &pound; <%= @product.price %>
-      </p>
-      <br>
-      <p>
-        <strong>Average Rating:</strong> 
-        <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></div> 
-      </p>
-      <br>
-      <!-- Payment button -->
-      <%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-      <%= hidden_field_tag(:product_id, @product.id) %>
-      <% end %>
+      
+      <div class="product-payment">
+        <h3 class="product-price">
+          &pound; <%= @product.price %>
+        </h3>
+        <div class="product-rating">
+          <strong>Average Rating:</strong> 
+          <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></div> 
+        </div>
+        <br>
+        <!-- Payment button -->
+        <div class="payment-button">
+          <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+          <% end %>
+        </div>
+      </div>
 
     </div>
   

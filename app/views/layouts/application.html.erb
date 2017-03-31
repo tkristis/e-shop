@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
 
 </head>
 <body>
@@ -103,12 +104,11 @@
               <h1>E-Shop</h1>
             </div>
             <div class="nav-right">
-              <li><%= link_to "HOME", static_pages_landing_page_path%></li>
+              <li><%= link_to "ALL PRODUCTS", products_path%></li>
               <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
               <li><%= link_to "MODS", category_path(id: 2) %></li>
               <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
               <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
-              <li><%= link_to "CONTACT", static_pages_contact_path %></li>
             </div>
           </ul>
         <!--/.navbar-collapse-->
@@ -116,14 +116,16 @@
       <!--/.navbar-->
     </div>
   </div>
+  
+  <div class="container">
+    <% if notice %>
+    <p id="notice" class="alert alert-success"><%= notice %></p>
+    <% end %>
 
-  <% if notice %>
-  <p id="notice" class="alert alert-success"><%= notice %></p>
-  <% end %>
-
-  <% if alert %>
-  <p id="alert" class="alert alert-danger"><%= alert %></p>
-  <% end %>
+    <% if alert %>
+    <p id="alert" class="alert alert-danger"><%= alert %></p>
+    <% end %>
+  </div>
 
   <%= yield %>
   <footer>

@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @products = @category.products.all.paginate(:page => params[:page], :per_page => 20)
   end
 
   # GET /categories/new
