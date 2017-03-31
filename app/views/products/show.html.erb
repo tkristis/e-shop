@@ -5,7 +5,6 @@
   <% end %>
 
   <div class="row" data-product-id="<%= @product.id %>">
-
     <div class="col-md-6 col-xs-12 show-product-left">
       <%= image_tag(@product.image_url, class: "img-zoom img-responsive", id: "product-img", data_zoom_image: "true") %>
     </div>
@@ -24,14 +23,15 @@
       <% end %>
       
       <div class="product-payment">
-        <h3 class="product-price">
-          &pound; <%= @product.price %>
-        </h3>
         <div class="product-rating">
           <strong>Average Rating:</strong> 
           <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></div> 
         </div>
-        <br>
+        <hr>
+        <h3 class="product-price">
+          &pound; <%= @product.price %>
+        </h3>
+        <hr>
         <!-- Payment button -->
         <div class="payment-button">
           <%= form_tag "/payments/create" do %>
@@ -40,10 +40,8 @@
           <% end %>
         </div>
       </div>
-
     </div>
   
-
     <div class="col-md-8 col-xs-12 comment-rate-product">
 
       <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>

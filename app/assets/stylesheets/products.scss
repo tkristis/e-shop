@@ -81,57 +81,58 @@ PRODUCTS LIST PAGE USER
 	letter-spacing: 1px;
 	line-height: 1.6;
 	font-family: 'Montserrat';
-}
-.show-product-right{
-	padding: 15px 0 15px 0;
-	text-align: left;
-}
-#product-img{
-	width: 80%;
-}
-.product-name{
-	margin-bottom: 15px;
-	font-weight: 600;
-	font-size: 2em;
-	text-align: center;
-	padding: 20px;
-	border: 6px solid #f2f2f2;
-	border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.product-description{
-	font-size: 1.1em;
-	margin-bottom: 15px;
-	padding: 20px;
-	border: 6px solid #f2f2f2;
-	border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.product-payment{
-	text-align: center;
-	border: 6px solid #f2f2f2;
-	border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 20px 0 25px 0;
-}
-.product-price{
-	font-weight: bold;
-	font-size: 2.5em;
-	color: #689F38;
-	margin-bottom: 15px;
-}
-.comment-rate-product{
-	padding: 40px 0 0 67px;
-	font-family: 'Lato';
-}
-.product-reviews{
-	padding-left: 15px;
+	.show-product-right{
+		padding: 15px 0 15px 0;
+		text-align: left;
+	}
+	#product-img{
+		width: 80%;
+	}
+	.product-name{
+		margin-bottom: 15px;
+		font-weight: 600;
+		font-size: 2em;
+		text-align: center;
+		padding: 20px;
+		border: 6px solid #f2f2f2;
+		border-radius: 5px;
+		-o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+	.product-description{
+		margin-bottom: 15px;
+		padding: 20px;
+		border: 6px solid #f2f2f2;
+		border-radius: 5px;
+		-o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+	.product-payment{
+		text-align: center;
+		border: 6px solid #f2f2f2;
+		border-radius: 5px;
+		-o-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		padding: 20px 0 25px 0;
+	}
+	.product-price{
+		font-weight: bold;
+		font-size: 2.5em;
+		color: #689F38;
+	}
+	hr{
+		border: 1px solid #f2f2f2;;
+	}
+	.comment-rate-product{
+		padding: 40px 0 0 67px;
+		font-family: 'Lato';
+	}
+	.product-reviews{
+		padding-left: 15px;
+	}
 }
 /************************
 *************************
