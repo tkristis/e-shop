@@ -21,20 +21,23 @@ $(document).on('turbolinks:load', function(){
     easing: "true"
   }); 
 
+  // Dropdown menu
   $('ul.nav li.dropdown').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
   }, function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
   });
 
+  // Fixed Navigation
   $(window).scroll(function(){                          
-    if ($(this).scrollTop() > 200) {
+    if ($(this).scrollTop() > 150) {
       $('.fixed-menu').fadeIn(500);
     } else {
       $('.fixed-menu').fadeOut(500);
     }
   });
 
+  // Landing page categories overview
   $('.slide').hover(
     function(){
       $(this).find('.caption').fadeIn(250);
