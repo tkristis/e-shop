@@ -1,5 +1,4 @@
 <% cache do %>
-<% if signed_in? && current_user.admin? %>
 <div class="product-list-admin">
   <div class="container">
     <center><h1>Product list</h1></center>
@@ -34,5 +33,4 @@
     <%= link_to 'New Product', new_product_path, class: "new-product" %>
   </div>
 </div>
-<% end %>
 <% end %>
