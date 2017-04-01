@@ -34,4 +34,13 @@ $(document).on('turbolinks:load', function(){
       $('.fixed-menu').fadeOut(500);
     }
   });
+
+  $('.slide').hover(
+    function(){
+      $(this).find('.caption').fadeIn(250);
+    },
+    function(){
+      $(this).find('.caption').fadeOut(250);
+    }
+  );
 });
