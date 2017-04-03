@@ -221,8 +221,8 @@ footer{
   font-size: 15px;
   .footer-links{
     margin: 0 auto;
-    width: 60%;
     padding-bottom: 40px;
+    width: 60%;
   }
   .row{
     padding-left: 90px;
@@ -233,7 +233,7 @@ footer{
   }
   .links li{
     text-align: left;
-    padding: 5px 0;
+    padding: 2px 0;
     list-style-type: none;
   }
   a{
@@ -747,6 +747,11 @@ PRODUCTS LIST PAGE ADMIN
       font-size: 16px;
     }
   }
+  footer{
+    .footer-links{
+      width: initial;
+    }
+  }
 }
 @media screen and (max-width: 990px){
   .nav.fixed-menu{
@@ -1001,6 +1006,32 @@ PRODUCTS LIST PAGE ADMIN
     }
   }
 }
+/****************************************
+*****************************************
+**TWO COLUMNS FOR BIGGER SCREEN DEVICES**
+*****************************************
+****************************************/
+@media screen and (min-width: 425px) and (max-width: 768px){
+  .col-xs-12{
+    width: 50%;
+  }
+  .show-product{
+    .col-xs-12{
+      width: initial;
+    }
+  }
+  footer{
+    .col-xs-12{
+      width: initial;
+    }
+    .footer-links{
+      width: initial;
+    }
+    .row{
+      padding-left: 0;
+    }
+  }
+}
 @media screen and (max-width: 480px) {  
   header{
     .header-right{
@@ -1075,24 +1106,22 @@ PRODUCTS LIST PAGE ADMIN
       font-size     : 1em;
     }
   }
-}
-/****************************************
-*****************************************
-**TWO COLUMNS FOR BIGGER SCREEN DEVICES**
-*****************************************
-****************************************/
-@media screen and (min-width: 425px) and (max-width: 768px){
-  .col-xs-12{
-    width: 50%;
-  }
-  .show-product{
-    .col-xs-12{
-      width: initial;
-    }
-  }
   footer{
     .col-xs-12{
-      width: initial;
+      width: 100%;
+      padding: 10px 0;
+    }
+    .row{
+      padding-left: 0;
+    }
+    .footer-links h5{
+      text-align: center;
+    }
+    .footer-links li{
+      text-align: center;
+    }
+    .social li{
+      padding: 0 5px;
     }
   }
 }
@@ -1188,6 +1217,11 @@ PRODUCTS LIST PAGE ADMIN
       margin: 0;
       font-size: 1em;
       text-align: justify;
+    }
+  }
+  footer{
+    .row{
+      padding-left: 0;
     }
   }
 }
