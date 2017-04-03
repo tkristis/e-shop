@@ -222,10 +222,9 @@ footer{
   .footer-links{
     margin: 0 auto;
     padding-bottom: 40px;
-    width: 60%;
   }
   .row{
-    padding-left: 90px;
+    margin: 0 auto;
   }
   h5{
     padding-bottom: 10px;
@@ -245,7 +244,7 @@ footer{
   }
   .social{
     border-top: 1px solid #c6c6c6;
-    padding: 15px 0;
+    padding: 20px 0;
   }
   h4{
     font-weight: bold;
@@ -273,9 +272,10 @@ footer{
     border-bottom: 1px solid #c6c6c6;
     padding: 40px 0;
   }
-  .copyright p{
-    font-weight: 400;
+  p{
     padding-top: 30px;
+    height: 50px;
+    line-height: 50px;
   }
 }
 /************************
@@ -631,6 +631,16 @@ PRODUCTS LIST PAGE ADMIN
     font-size: 16px;
   }
 }
+@media screen and (min-width: 1204px){
+  footer{
+    .footer-links{
+      width: 60%;
+    }
+    .row{
+      padding-left: 90px;
+    }
+  }
+}
 /********************
 *********************
   FIXED NAVIGATION
@@ -748,11 +758,6 @@ PRODUCTS LIST PAGE ADMIN
     .shop a {
       padding: 10px 18px;
       font-size: 16px;
-    }
-  }
-  footer{
-    .footer-links{
-      width: initial;
     }
   }
 }
@@ -932,11 +937,6 @@ PRODUCTS LIST PAGE ADMIN
       font-size     : 1em;
     }
   }
-  footer{
-    .footer-links{
-      width: inherit;
-    }
-  }
 }
 @media screen and (max-width: 640px) {  
   .banner-top{
@@ -1026,12 +1026,6 @@ PRODUCTS LIST PAGE ADMIN
   footer{
     .col-xs-12{
       width: initial;
-    }
-    .footer-links{
-      width: initial;
-    }
-    .row{
-      padding-left: 0;
     }
   }
 }
