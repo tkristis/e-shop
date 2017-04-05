@@ -624,12 +624,6 @@ PRODUCTS LIST PAGE ADMIN
   .navbar-nav {
     margin-right: 30px;
   }
-  .banner-info h3 {
-    font-size: 40px;
-  }
-  .banner-info p {
-    font-size: 16px;
-  }
 }
 @media screen and (min-width: 1204px){
   footer{
@@ -657,10 +651,11 @@ PRODUCTS LIST PAGE ADMIN
     left: 0;
     width: 100%;
     height: auto;
-    background-color: #ffffff;
+    background-color: #EEEEEE;
     z-index: 9999;
+    opacity: 0.95;
     display: none;
-    box-shadow: 0 3px 12px #bdbdbd;
+    box-shadow: 0 4px 12px 1px #BDBDBD;
     letter-spacing: 1px;
     .logo-left{
       width: 20%;
@@ -686,6 +681,7 @@ PRODUCTS LIST PAGE ADMIN
     .nav-right{
       width: 80%;
       float: right;
+      text-align: right;
     }
     li > a{
       color: #7CB342;
