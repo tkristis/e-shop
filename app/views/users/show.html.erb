@@ -1,14 +1,70 @@
-<p id="notice"><%= notice %></p>
+<div class="container user-show">
+  <center><h1>User details</h1></center>
+  <div class="row">
+    
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Vardas:</h4>
+        <p class="list-group-item-text"><%= @user.first_name %></p>
+      </div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Pavardė:</h4>
+        <p class="list-group-item-text"><%= @user.last_name %></p>
+      </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Gimimo data</h4>
+        <p class="list-group-item-text"><%= @user.date_of_birth %></p>
+      </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Elektroninis paštas</h4>
+        <p class="list-group-item-text"><%= @user.email %></p>
+      </div>
+
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Telefono numeris</h4>
+        <p class="list-group-item-text"><%= @user.phone_number %></p>
+      </div>
+
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Gatvės pavadinimas</h4>
+        <p class="list-group-item-text"><%= @user.address %></p>
+      </div>
+
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Gatvės pavadinimas 2</h4>
+        <p class="list-group-item-text"><%= @user.address2 %></p>
+      </div>
+
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Namo numeris</h4>
+        <p class="list-group-item-text"><%= @user.home_number %></p>
+      </div>
+
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Šalis</h4>
+        <p class="list-group-item-text"><%= @user.country %></p>
+      </div>
+
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Miestas</h4>
+        <p class="list-group-item-text"> <%= @user.city %></p>
+      </div>
+
+      <div href="" class="list-group-item">
+        <h4 class="list-group-item-heading">Pašto kodas</h4>
+        <p class="list-group-item-text"><%= @user.postcode %></p>
+      </div>
+      
+    </div>
+  </div>
+
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %> 
+</div>

@@ -1,0 +1,33 @@
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-6 col-sm-6 left">
+        <!-- User login, logout, registration -->
+        <div class="header-left">
+          <ul>
+            <% if user_signed_in? %>
+            <i class="glyphicon glyphicon-log-out"></i><li><%= link_to t('auth.sign_out'), destroy_user_session_path, method: 'delete' %></li>
+            <li><%= link_to "Change your password", edit_user_registration_path %></li>
+            <% else %>
+            <i class="glyphicon glyphicon-log-in"></i><li><%= link_to t('auth.sign_in'), new_user_session_path %></li>
+            <i class="glyphicon glyphicon-lock"></i><li><%= link_to t('auth.sign_up'), new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-6 col-sm-6 right">
+        <div class="header-right">
+          <!-- Search box -->
+          <%= form_tag("/products", method: "get", class: "navbar-form") do %>
+          <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+          <button class="btn btn-primary"><%= submit_tag("") %>
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><!-- HEADER END -->

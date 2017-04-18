@@ -1,22 +1,24 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/about'
+  get 'about', to: 'static_pages#about'
 
-  get 'static_pages/faq'
+  get 'faq', to: 'static_pages#faq'
 
-  get 'static_pages/contact'
+  get 'contact', to: 'static_pages#contact'
 
-  get 'static_pages/landing_page'
+  get 'landing_page', to: 'static_pages#landing_page'
 
-  get 'static_pages/product_list'
+  get 'product_list', to: 'static_pages#product_list'
 
-  post 'static_pages/thank_you'
+  post 'thank_you', to: 'static_pages#thank_you'
 
   post 'payments/create'
 
   root 'static_pages#landing_page'
 
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   
   resources :products do
     resources :comments

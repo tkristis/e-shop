@@ -53,6 +53,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    comma (4.0.1)
+      activesupport (>= 4.0.0, < 5.1)
     concurrent-ruby (1.0.5)
     dalli (2.7.6)
     database_cleaner (1.5.3)
@@ -232,6 +234,7 @@ DEPENDENCIES
   byebug
   cancancan (~> 1.10)
   coffee-rails (~> 4.1.0)
+  comma
   dalli
   database_cleaner (~> 1.5.3)
   devise

@@ -1,10 +1,60 @@
-.user-sign{
-  margin        : 0 auto;
-  max-width     : 330px;
-  padding-top   : 40px;
+#submit{
+  font-size: 14px;
+  background: #7CB342;
+  background-image: -webkit-linear-gradient(top, #7CB342, #AED581);
+  background-image: -moz-linear-gradient(top, #7CB342, #AED581);
+  background-image: -ms-linear-gradient(top, #7CB342, #AED581);
+  background-image: -o-linear-gradient(top, #7CB342, #AED581);
+  background-image: linear-gradient(to bottom, #7CB342, #AED581);
+  border: none;
+  height: 34px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  padding: 6px 12px;
+  margin: 33px 0;
+}
+#submit:hover, #submit:active, #submit:focus {
+  background: #AED581;
+  background-image: -webkit-linear-gradient(top, #AED581, #7CB342);
+  background-image: -moz-linear-gradient(top, #AED581, #7CB342);
+  background-image: -ms-linear-gradient(top, #AED581, #7CB342);
+  background-image: -o-linear-gradient(top, #AED581, #7CB342);
+  background-image: linear-gradient(to bottom, #AED581, #7CB342);
+  text-decoration: none;
+  border: none;
+  border-color: transparent;
+}
+/**************************
+***************************
+    USER LOGIN PAGE
+***************************
+**************************/
+.user-login{
+  width: 350px;
+  padding-top: 100px;
   padding-bottom: 100px;
   h2{
-    padding-bottom: 5px;
+    padding-bottom: 15px;
+  }
+}
+/**************************
+***************************
+  USER REGISTRATION PAGE
+***************************
+**************************/
+.user-registration{
+  margin        : 0 auto;
+  padding-top   : 100px;
+  padding-bottom: 100px;
+  width: 60%;
+  .left{
+    padding-right: 30px;
+  }
+  h2{
+    padding-bottom: 15px;
   }
   .form-group{
     margin-bottom: 15px;
@@ -13,32 +63,19 @@
   a{
     color: #333;
   }
-  .btn-block{
-    background: #7CB342;
-    background-image: -webkit-linear-gradient(top, #7CB342, #AED581);
-    background-image: -moz-linear-gradient(top, #7CB342, #AED581);
-    background-image: -ms-linear-gradient(top, #7CB342, #AED581);
-    background-image: -o-linear-gradient(top, #7CB342, #AED581);
-    background-image: linear-gradient(to bottom, #7CB342, #AED581);
-    border: none;
+  #submit{
+    margin: 20px auto 0 auto;
+    padding: 5px 0;
+    height: 60px;
+    font-size: 1.4em;
+    font-weight: bold;
     letter-spacing: 1px;
-    border-radius: 4px;
-    -o-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    padding: 8px 0;
-    margin: 10px 0;
+    transition: 0s;
   }
-  .btn-block:hover, .btn-block:active, .btn-block:focus {
-    background: #AED581;
-    background-image: -webkit-linear-gradient(top, #AED581, #7CB342);
-    background-image: -moz-linear-gradient(top, #AED581, #7CB342);
-    background-image: -ms-linear-gradient(top, #AED581, #7CB342);
-    background-image: -o-linear-gradient(top, #AED581, #7CB342);
-    background-image: linear-gradient(to bottom, #AED581, #7CB342);
-    text-decoration: none;
-    border: none;
-    border-color: transparent;
+  #submit:hover{
+    color: #AED581;
+    background: #ffffff;
+    border: 2px solid #AED581;
   }
 }
 /**************************
@@ -85,4 +122,27 @@
     display: inline-block;
   }
 }
-
+/**************************
+***************************
+    USER SHOW PAGE
+***************************
+**************************/
+.user-show{
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 80%;
+  h1{
+    padding-bottom: 25px;
+  }
+}
+/**************************
+***************************
+    EDIT USER PAGE
+***************************
+**************************/
+.edit-user{
+  padding: 50px 0;
+  h1{
+    padding-bottom: 20px;
+  }
+}

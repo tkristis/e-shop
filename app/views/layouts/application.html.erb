@@ -5,174 +5,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
   <meta name="viewport" content="width=device-width">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <meta name="format-detection" content="telephone=no">
   <%= csrf_meta_tags %>
-
   <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,600|Patua+One|Source+Sans+Pro" rel="stylesheet">
 </head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-xs-6 col-sm-6 left">
-          <!-- User login, logout, registration -->
-          <div class="header-left">
-            <ul>
-              <% if user_signed_in? %>
-              <i class="glyphicon glyphicon-log-out"></i><li><%= link_to t('auth.sign_out'), destroy_user_session_path, method: 'delete' %></li>
-              <% else %>
-              <i class="glyphicon glyphicon-log-in"></i><li><%= link_to t('auth.sign_in'), new_user_session_path %></li>
-              <i class="glyphicon glyphicon-lock"></i><li><%= link_to t('auth.sign_up'), new_user_registration_path %></li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-xs-6 col-sm-6 right">
-          <div class="header-right">
-            <!-- Search box -->
-            <%= form_tag("/products", method: "get", class: "navbar-form") do %>
-            <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
-            <button class="btn btn-primary"><%= submit_tag("") %>
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </div>
-          <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header><!-- HEADER END -->
-  <!-- NAVBAR STARTS HERE -->
-  <div class="banner-top">
-    <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="logo">
-            <h2><%= link_to "Clouds", static_pages_landing_page_path %></h2>
-            <h1><span>E</span>-Shop</h1>
-          </div>
-        </div>
-        <!-- RELATIVE NAVIGATION-->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "HOME", static_pages_landing_page_path%></li>
-            <li class="dropdown">
-              <%= link_to(raw("ALL PRODUCTS" +("<b class= 'caret'></b>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
-              <ul class="dropdown-menu">
-                <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
-                <li><%= link_to "MODS", category_path(id: 2) %></li>
-                <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
-                <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
-              </ul>
-            </li>
-            <% if signed_in? && current_user.admin? %>
-            <li class="dropdown">
-              <%= link_to(raw("ADMIN CONTROL" +("<b class= 'caret'></b>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
-              <ul class="dropdown-menu">
-                <li><%= link_to "CATEGORIES", categories_path %></li>
-                <li><%= link_to "NEW CATEGORY", new_category_path %></li>
-                <li><%= link_to "NEW PRODUCT", new_product_path %></li>
-                <li><%= link_to "PRODUCTS LIST", static_pages_product_list_path %></li>
-              </ul>
-            </li>
-            <% end %>
-            <li><%= link_to "CONTACT", static_pages_contact_path %></li>
-          </ul>
-        </div>
-          <!-- FIXED NAVIGATION -->
-          <ul class="nav fixed-menu">
-            <div class="logo-left">
-              <h2><%= link_to "Clouds", static_pages_landing_page_path %></h2>
-              <h1>E-Shop</h1>
-            </div>
-            <div class="nav-right">
-              <li><%= link_to "ALL PRODUCTS", products_path%></li>
-              <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
-              <li><%= link_to "MODS", category_path(id: 2) %></li>
-              <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
-              <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
-            </div>
-          </ul>
-        <!--/.navbar-collapse-->
-      </nav>
-      <!--/.navbar-->
-    </div>
-  </div>
-  
-  <div class="container">
-    <% if notice %>
-    <p id="notice" class="alert alert-success"><%= notice %></p>
-    <% end %>
-
-    <% if alert %>
-    <p id="alert" class="alert alert-danger"><%= alert %></p>
-    <% end %>
-  </div>
-
-  <%= yield %>
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12 links">
-            <h5>SHOP</h5>
-            <ul>
-              <li><%= link_to "Purchase Flavors", category_path(id: 1) %></li>
-              <li><%= link_to "Purchase Mods", category_path(id: 2) %></li>
-              <li><%= link_to "Purchase Atomizers", category_path(id: 3) %></li>
-              <li><%= link_to "Purchase Accessories", category_path(id: 4) %></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12 links">
-            <h5>ACCOUNT</h5>
-            <ul>
-              <li><%= link_to "Create an Account", new_user_registration_path %></li>
-              <li><%= link_to "Manage Your Account", static_pages_about_path %></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12 links">
-            <h5>ABOUT</h5>
-            <ul>
-              <li><%= link_to "Faq", static_pages_faq_path %></li>
-              <li><%= link_to "Contact Us", static_pages_contact_path %></li>
-              <li><%= link_to "Our Story", static_pages_about_path %></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="social">
-        <center><h4>Social</h4></center>
-        <ul>
-          <li><a href="#"><span class="fi-social-facebook icon-size"></span>Facebook</a></li>
-          <li><a href="#"><span class="fi-social-twitter icon-size"></span>Twitter</a></li>
-          <li><a href="#"><span class="fi-social-google-plus icon-size"></span>Google</a></li>
-        </ul>
-      </div>
-      <div class="cards text-center">
-        <%= image_tag("cards.jpg", class: "img-responsive") %>
-      </div>
-      <div class="copyright text-center">
-        <p>© 2017 Clouds Eshop. All Rights Reserved</p>
-      </div>
-    </div>
-  </footer>
-</body>
+  <body>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/alerts' %>'
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
 </html>
