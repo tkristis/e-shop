@@ -6,4 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.create(:name => "seed-generated product", :description => "I also created this product without using the HTML form!")
+Category.create(:name => "Liquids", :desc => "Vape liquids")
+Category.create(:name => "Accessories", :desc => "cotton, coils and etc")
+Category.create(:name => "Mods", :desc => "box mods, mechanical mods")
