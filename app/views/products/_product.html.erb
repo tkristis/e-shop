@@ -3,7 +3,9 @@
   <div class="product-block">
     <h4 id="product-name"><%= product.name %></h4>
     <%= link_to product_path(product), class: 'product_link' do %>
-      <%= image_tag(product.image_url, class: "img-responsive") %>
+        <% if product.image_url %>
+            <%= image_tag(product.image_url, class: "img-responsive") %>
+        <% end %>
     <% end %>
     <div class="price">
       <h3>&pound; <%= product.price %></h3>

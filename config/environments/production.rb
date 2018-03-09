@@ -1,5 +1,6 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings specified here will take precedence
+  # over those in config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -10,20 +11,22 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  #These settings are for the sending out email for active admin and consequently the devise mailer
-  config.action_mailer.default_url_options = { :host => 'vapeclouds.herokuapp.com' }
+  # These settings are for the sending out email
+  # for active admin and consequently the devise mailer
+  config.action_mailer.default_url_options = {
+    host: 'vapeclouds.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.smtp_settings = 
+  config.action_mailer.smtp_settings =
   {
-    :address            => 'smtp.gmail.com',
-    :port               =>  587,
-    :domain             => 'gmail.com', 
-    :authentication     => "plain",
-    :user_name          => ENV['gmail_username'],
-    :password           => ENV['gmail_password'],
-    :enable_starttls_auto => true
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    authentication:       'plain',
+    user_name:            ENV['gmail_username'],
+    password:             ENV['gmail_password'],
+    enable_starttls_auto: true
   }
 
   # Full error reports are disabled and caching is turned on.
@@ -41,7 +44,8 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
-  # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
+  # `config.assets.precompile` and `config.assets.version`
+  # have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -53,28 +57,32 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  # config.action_cable.allowed_request_origins =
+  # [ 'http://example.com', /http:\/\/example.*/ ]
 
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+  # Force all access to the app over SSL,
+  # use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
-  # Use the lowest log level to ensure availability of diagnostic information
-  # when problems arise.
+  # Use the lowest log level to ensure availability of
+  # diagnostic information when problems arise.
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Use a real queuing backend for Active Job (and separate queues per environment)
+  # Use a real queuing backend for Active Job
+  # (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "myapp_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  # Set this to true and configure the email server
+  # for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
@@ -89,9 +97,10 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
-  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+  # config.logger = ActiveSupport::TaggedLogging.new
+  # (Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
@@ -101,15 +110,15 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.cache_store = :dalli_store,
-  (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-  {:username => ENV["MEMCACHIER_USERNAME"],
-   :password => ENV["MEMCACHIER_PASSWORD"],
-   :failover => true,
-   :socket_timeout => 1.5,
-   :socket_failure_delay => 0.2,
-   :down_retry_delay => 60
- }
+  (ENV['MEMCACHIER_SERVERS'] || '').split(','),
+  { username: ENV['MEMCACHIER_USERNAME'],
+    password: ENV['MEMCACHIER_PASSWORD'],
+    failover: true,
+    socket_timeout: 1.5,
+    socket_failure_delay: 0.2,
+    down_retry_delay: 60
+  }
 
-  config.web_socket_server_url = "wss://vapeclouds.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://vapeclouds.herokuapp.com', 'http://vapeclouds.herokuapp.com'] 
+  config.web_socket_server_url = 'wss://vapeclouds.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = ['https://vapeclouds.herokuapp.com', 'http://vapeclouds.herokuapp.com']
 end
