@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe StaticPagesController, :type => :controller do
+describe StaticPagesController, type: :controller do
   context 'GET #landing_page' do
     before do
       get :landing_page
@@ -15,5 +15,4 @@ describe StaticPagesController, :type => :controller do
       expect(response).to render_template('landing_page')
     end
   end
-
 end

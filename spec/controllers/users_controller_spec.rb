@@ -1,13 +1,11 @@
 require 'rails_helper'
 
-describe UsersController, :type => :controller do
-
-  #user = User.create!(email: "test@test.com", password: "123456")
+describe UsersController, type: :controller do
+  # user = User.create!(email: "test@test.com", password: "123456")
 
   let(:user) { FactoryGirl.create(:user) }
 
   describe 'GET #show' do
-
     context 'User is logged in' do
       before do
         sign_in user
@@ -25,6 +23,5 @@ describe UsersController, :type => :controller do
        expect(response).to redirect_to(new_user_session_path)
      end
    end
-
- end
+  end
 end
