@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_categories
 
   rescue_from CanCan::AccessDenied do |exception|
-  	redirect_to main_app.root_url, :alert => exception.message
+  	redirect_to main_app.root_url, alert: exception.message
   end
 
   def set_categories
@@ -16,8 +16,35 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-  	devise_parameter_sanitizer.permit(:sign_up, keys: [:password, :password_confirmation, :remember_me, :first_name, :last_name, :date_of_birth, :address, :address2, :postcode, :phone_number, :home_number, :country, :city])
-    devise_parameter_sanitizer.permit(:sign_in, keys: [:username, :password, :remember_me])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email, :password, :password_confirmation, :current_password])
+  	devise_parameter_sanitizer.permit(:sign_up, keys:
+      [
+        :password,
+        :password_confirmation,
+        :remember_me,
+        :first_name,
+        :last_name,
+        :date_of_birth,
+        :address,
+        :address2,
+        :postcode,
+        :phone_number,
+        :home_number,
+        :country,
+        :city
+      ])
+    devise_parameter_sanitizer.permit(:sign_in, keys:
+      [
+        :username,
+        :password,
+        :remember_me
+      ])
+    devise_parameter_sanitizer.permit(:account_update, keys:
+      [
+        :username,
+        :email,
+        :password,
+        :password_confirmation,
+        :current_password
+      ])
   end
 end

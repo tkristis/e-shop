@@ -1,11 +1,26 @@
-# Offense count: 126
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
 Metrics/LineLength:
   Max: 150
 
 Metrics/BlockLength:
-  CountComments: false  # count full line comments?
+  CountComments: false
 
 Metrics/ClassLength:
-  CountComments: false  # count full line comments?
+  CountComments: false
+
+Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Layout/IndentationConsistency:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Rails/ApplicationRecord:
+  Enabled: false

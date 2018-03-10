@@ -7,37 +7,37 @@ class ProductsController < ApplicationController
     if params[:q].present?
       search_term = params[:q]
       if Rails.env.development?
-        @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 20)
+        @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(page: params[:page], per_page: 20)
       else
-        @products = Product.where("name ilike ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 20)
+        @products = Product.where("name ilike ?", "%#{search_term}%").paginate(page: params[:page], per_page: 20)
       end
     else
-      @products = Product.all.paginate(:page => params[:page], :per_page => 20)
+      @products = Product.all.paginate(page: params[:page], per_page: 20)
     end
   end
-  
+
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+    @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 5)
   end
 
   # GET /products/new
   def new
     @product = Product.new
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   # GET /products/1/edit
   def edit
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   # POST /products
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @product.category_id = params[:category_id] 
+    @product.category_id = params[:category_id]
 
     respond_to do |format|
       if @product.save
@@ -88,4 +88,4 @@ class ProductsController < ApplicationController
         :name, :description, :image_url, :color,
         :price, :year_of_manufacture, :category_id)
     end
-  end
+end
