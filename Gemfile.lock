@@ -217,7 +217,7 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.6)
+    uglifier (4.1.7)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -267,6 +267,9 @@ DEPENDENCIES
   web-console (~> 2.0)
   will_paginate (~> 3.1.1)
   will_paginate-bootstrap
+
+RUBY VERSION
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.16.1

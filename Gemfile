@@ -41,7 +41,7 @@ group :development, :test do
 
   gem 'rspec-rails', '~> 3.5'
 
-  gem "factory_bot"
+  gem 'factory_bot'
 
   gem 'database_cleaner', '~> 1.5.3'
 end
@@ -66,9 +66,9 @@ end
   gem 'rails-controller-testing'
   gem 'stripe'
   ## Security scanner 
-  gem "brakeman", :require => false
+  gem 'brakeman', :require => false
   gem 'dalli'
   gem 'redis-rails'
   gem 'newrelic_rpm'
-  gem "figaro"
-  gem "comma"
+  gem 'figaro'
+  gem 'comma'
