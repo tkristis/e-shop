@@ -6,7 +6,9 @@
 
   <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-md-6 col-xs-12 show-product-left">
-      <%= image_tag(@product.image_url, class: "img-zoom img-responsive", id: "product-img", data_zoom_image: "true") %>
+      <% if @product.image_url %>
+        <%= image_tag(@product.image_url, class: "img-zoom img-responsive", id: "product-img", data_zoom_image: "true") %>
+      <% end %>
     </div>
 
     <div class="col-md-6 col-xs-12 show-product-right">
@@ -50,9 +52,6 @@
       
       <br><br>
       <div class="digg_pagination">
-        <div class="page_info">
-          <%= page_entries_info @comments %>
-        </div>
         <%= will_paginate @comments, :container => false %>
       </div>
 
