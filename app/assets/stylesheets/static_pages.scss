@@ -1,3 +1,6 @@
+/*************
+    GLOBAL
+*************/
 body{
   padding:0;
   margin:0;
@@ -39,6 +42,12 @@ ul{
 }
 #notice{
   margin: 10px 0 0 0;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
 }
 /************************
         LAYOUT

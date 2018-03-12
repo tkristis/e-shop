@@ -13,21 +13,23 @@ Rails.application.configure do
 
   # These settings are for the sending out email
   # for active admin and consequently the devise mailer
-  config.action_mailer.default_url_options = {
-    host: 'vapeclouds.herokuapp.com' }
+  config.action_mailer.default_url_options =
+    {
+      host: 'vapeclouds.herokuapp.com'
+    }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings =
-  {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'gmail.com',
-    authentication:       'plain',
-    user_name:            ENV['gmail_username'],
-    password:             ENV['gmail_password'],
-    enable_starttls_auto: true
-  }
+    {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'gmail.com',
+      authentication:       'plain',
+      user_name:            ENV['gmail_username'],
+      password:             ENV['gmail_password'],
+      enable_starttls_auto: true
+    }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -111,13 +113,14 @@ Rails.application.configure do
 
   config.cache_store = :dalli_store,
   (ENV['MEMCACHIER_SERVERS'] || '').split(','),
-  { username: ENV['MEMCACHIER_USERNAME'],
-    password: ENV['MEMCACHIER_PASSWORD'],
-    failover: true,
-    socket_timeout: 1.5,
-    socket_failure_delay: 0.2,
-    down_retry_delay: 60
-  }
+    {
+      username: ENV['MEMCACHIER_USERNAME'],
+      password: ENV['MEMCACHIER_PASSWORD'],
+      failover: true,
+      socket_timeout: 1.5,
+      socket_failure_delay: 0.2,
+      down_retry_delay: 60
+    }
 
   config.web_socket_server_url = 'wss://vapeclouds.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = ['https://vapeclouds.herokuapp.com', 'http://vapeclouds.herokuapp.com']

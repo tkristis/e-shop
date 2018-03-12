@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_categories
 
   rescue_from CanCan::AccessDenied do |exception|
-  	redirect_to main_app.root_url, alert: exception.message
+    redirect_to main_app.root_url, alert: exception.message
   end
 
   def set_categories
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-  	devise_parameter_sanitizer.permit(:sign_up, keys:
+    devise_parameter_sanitizer.permit(:sign_up, keys:
       [
         :password,
         :password_confirmation,

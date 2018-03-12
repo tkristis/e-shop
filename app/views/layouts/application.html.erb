@@ -15,9 +15,9 @@
   <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,600|Patua+One|Source+Sans+Pro" rel="stylesheet">
 </head>
   <body>
+    <%= render 'layouts/alerts' %>
     <%= render 'layouts/header' %>
-    <%= render 'layouts/navigation' %>
-    <%= render 'layouts/alerts' %>'
+    <%= render 'layouts/navigation' %>'
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

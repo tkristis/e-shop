@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function(){
 
   // Fixed Navigation
   $(window).scroll(function(){                          
-    if ($(this).scrollTop() > 115) {
+    if ($(this).scrollTop() > 110) {
       $('.fixed-menu').fadeIn(0);
     } else {
       $('.fixed-menu').fadeOut(0);

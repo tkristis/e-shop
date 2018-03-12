@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'about', to: 'static_pages#about'
 
@@ -20,7 +19,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
-  
+
   resources :products do
     resources :comments
   end
@@ -28,9 +27,9 @@ Rails.application.routes.draw do
   resources :categories do
     resources :products
   end
-  
+
   resources :users
-  
+
   resources :orders, only: [:index, :show, :create, :destroy]
 
   mount ActionCable.server => '/cable'

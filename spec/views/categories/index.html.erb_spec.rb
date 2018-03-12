@@ -4,12 +4,12 @@ RSpec.describe 'categories/index', type: :view do
   before(:each) do
     assign(:categories, [
       Category.create!(
-         name: 'Name',
-         desc: 'MyText'
+        name: 'Name',
+        desc: 'MyText'
       ),
       Category.create!(
-         name: 'Name',
-         desc: 'MyText'
+        name: 'Name',
+        desc: 'MyText'
       )
     ])
   end
