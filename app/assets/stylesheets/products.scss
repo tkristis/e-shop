@@ -51,11 +51,11 @@ PRODUCTS LIST PAGE USER
 		padding: 20px 10px;
 		font-weight: bold;
 		width: 200px;
-    margin-bottom: 6px;
-    display: inline-block;
-    background-color: #ffffff;
-    border-radius: 5px;
-    -o-border-radius: 5px;
+	    margin-bottom: 6px;
+	    display: inline-block;
+	    background-color: #ffffff;
+	    border-radius: 5px;
+	    -o-border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 		// box-shadow: 0 0 14px 1px #424242;
@@ -63,9 +63,9 @@ PRODUCTS LIST PAGE USER
 	img{
 		height: 200px;
 		width: 200px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    -o-border-radius: 5px;
+	    background-color: #ffffff;
+	    border-radius: 5px;
+	    -o-border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
@@ -160,6 +160,11 @@ PRODUCTS LIST PAGE USER
 *************************
 ************************/
 @media (min-width: 320px) and (max-width: 425px){
+	.show-product{
+	    .col-xs-12{
+	      padding: 10px 30px;
+	    }
+	  }
 	.show-product-right p{
 		line-height   : 1.6;
 		font-size     : 1.2em;
@@ -171,6 +176,16 @@ PRODUCTS LIST PAGE USER
 		padding: 40px 0 0 30px;
 	}
 }	
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .show-product{
+    .col-xs-12{
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px 30px;
+    }
+  }
+}
 
 @media (min-width: 320px) and (max-width: 768px){
 	.products{
