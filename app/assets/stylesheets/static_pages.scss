@@ -651,10 +651,10 @@ PRODUCTS LIST PAGE ADMIN
     left: 0;
     width: 100%;
     height: auto;
-    background-color: #EEEEEE;
+    background-color: rgba(0, 0, 0, 0.65);
     z-index: 9999;
     display: none;
-    box-shadow: 0 4px 12px 1px #BDBDBD;
+    // box-shadow: 0 4px 12px 1px #BDBDBD;
     letter-spacing: 1px;
     .logo-left{
       width: 20%;
@@ -663,7 +663,7 @@ PRODUCTS LIST PAGE ADMIN
       height: 57px;
     }
     h1 {
-      color: #333;
+      color: #fff;
       text-decoration: none;
       font-size: 25px;
       letter-spacing: 2px;

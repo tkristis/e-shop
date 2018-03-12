@@ -32,10 +32,10 @@ $(document).on('turbolinks:load', function(){
 
   // Fixed Navigation
   $(window).scroll(function(){                          
-    if ($(this).scrollTop() > 150) {
-      $('.fixed-menu').fadeIn(500);
+    if ($(this).scrollTop() > 115) {
+      $('.fixed-menu').fadeIn(0);
     } else {
-      $('.fixed-menu').fadeOut(500);
+      $('.fixed-menu').fadeOut(0);
     }
   });
 

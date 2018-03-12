@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.create(name: "Liquid", category_id: 7, price: 10, image_url: 'http://www.vapetrade.com/content/imgs/products/fullsize/1807-fullsize-original-element-e-liquids-pink-lemonade-vape-juice-with-nicotine-electronic-cigarette-eliquid-usa-made-ejuice-10ml-1-1200.png' )
-
-
+Product.create(category_id: 1, name: "Element - Pink Lemonade 10ml", price: 10, image_url: 'http://www.vapetrade.com/content/imgs/products/fullsize/1807-fullsize-original-element-e-liquids-pink-lemonade-vape-juice-with-nicotine-electronic-cigarette-eliquid-usa-made-ejuice-10ml-1-1200.png' )
+Product.create(category_id: 2, name: "Smok G - PRIV ", price: 60, image_url: 'https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/1eEAAOSw-K9ZF5g3/$_86.JPG' )
+Product.create(category_id: 3, name: "SMOK TFV12 Cloud Beast King", price: 30, image_url: 'https://cdn.shopify.com/s/files/1/0379/4121/products/TFV12-smok-nz.png?v=1489369841' )
+Product.create(category_id: 4, name: "Cotton Bacon V2", price: 5, image_url: 'https://www.elementvape.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/i/wick_n_vape_organic_cotton_bacon_v2_1_2.jpg' )

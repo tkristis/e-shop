@@ -7,35 +7,41 @@
       <%= devise_error_messages! %>
 
       <div class="field form-group">
-        <%= f.label :First_name %><br />
+        <%= f.label :First_name %>
+        <span class="required"> * </span>
         <%= f.text_field :first_name, autofocus: true, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
-        <%= f.label :Last_name %><br />
+        <%= f.label :Last_name %>
+        <span class="required"> * </span>
         <%= f.text_field :last_name, autofocus: true, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
-        <%= f.label :Date_of_birth %><br />
+        <%= f.label :Date_of_birth %>
+        <span class="required"> * </span>
         <%= f.date_field :date_of_birth, type: "date", :required => true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
-        <%= f.label :email %><br />
+        <%= f.label :email %>
+        <span class="required"> * </span>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :password %>
+        <span class="required"> * </span>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
+        <% end %>
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="field form-group">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :password_confirmation %>
+        <span class="required"> * </span>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
 
@@ -44,32 +50,37 @@
 
       <div class="field form-group">
         <%= f.label :address %>
+        <span class="required"> * </span>
         <%= f.text_field :address, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :house_number %>
+        <span class="required"> * </span>
         <%= f.text_field :home_number, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :country %>
+        <span class="required"> * </span>
         <%= f.text_field :country, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :city %>
+        <span class="required"> * </span>
         <%= f.text_field :city, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :postcode %>
+        <span class="required"> * </span>
         <%= f.text_field :postcode, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :phone_number %>
-        <%= f.text_field :phone_number, placeholder: "number with country code", required: true, class: "form-control" %>
+        <%= f.text_field :phone_number, placeholder: "+44", class: "form-control" %>
       </div>
       
     </div>

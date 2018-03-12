@@ -50,10 +50,9 @@
           </div>
           <div class="nav-right">
             <li><%= link_to "ALL PRODUCTS", products_path%></li>
-            <li><%= link_to "LIQUIDS", category_path(id: 1) %></li>
-            <li><%= link_to "MODS", category_path(id: 2) %></li>
-            <li><%= link_to "ATOMIZERS", category_path(id: 3) %></li>
-            <li><%= link_to "ACCESORIES", category_path(id: 4) %></li>
+            <% @categories.each do |category| %>
+              <li><%= link_to category.name, category %></li>
+            <% end %>
           </div>
         </ul>
       <!--/.navbar-collapse-->
