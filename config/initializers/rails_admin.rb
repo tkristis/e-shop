@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
   ### Popular gems integration
-
+  config.main_app_name = ["Vape Shop", "Clouds"]
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user
@@ -31,7 +31,7 @@ RailsAdmin.config do |config|
     show
     edit
     delete
-    show_in_app
+    # show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
