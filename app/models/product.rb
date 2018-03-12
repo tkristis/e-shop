@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
-  has_many :orders
-  has_many :comments
+  has_many :orders, dependent: :destroy
+  has_many :comments, dependent: :destroy
   belongs_to :category
   validates :name, presence: true
 

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'product_list', to: 'static_pages#product_list'
 
-  post 'thank_you', to: 'static_pages#thank_you'
+  post 'static_pages/thank_you'
 
   post 'payments/create'
 
