@@ -15,11 +15,13 @@ $(document).on('turbolinks:load', function(){
   refreshRating();
 
   // Product image zoom 
-  $('.img-zoom').elevateZoom({
-    zoomType: "inner",
-    cursor  : "crosshair",
-    easing: "true"
-  }); 
+  if($(window).width()>768){
+    $('.img-zoom').elevateZoom({
+      zoomType: "inner",
+      cursor  : "crosshair",
+      easing: "true"
+    });
+  }
 
   // Dropdown menu
   $('ul.nav li.dropdown').hover(function() {

@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create(:name => "Liquids", :desc => "Vape liquids")
-Category.create(:name => "Accessories", :desc => "cotton, coils and etc")
-Category.create(:name => "Mods", :desc => "box mods, mechanical mods")
+Product.create(name: "Liquid", category_id: 7, price: 10, image_url: 'http://www.vapetrade.com/content/imgs/products/fullsize/1807-fullsize-original-element-e-liquids-pink-lemonade-vape-juice-with-nicotine-electronic-cigarette-eliquid-usa-made-ejuice-10ml-1-1200.png' )
+
+

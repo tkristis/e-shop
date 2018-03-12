@@ -1,8 +1,12 @@
 <div class="products">
   <div class="container">
-    <center><h1>All products</h1></center>
     <div class="row">
-      <%= render @products, cache: Proc.new{|item| [item, 'show']} %>
+    <% if (@products.empty?) %>
+        <h1>No products found</h1>
+    <% else %>
+         <h1>All products</h1>
+        <%= render @products, cache: Proc.new{|item| [item, 'show']} %>
+    <% end %>
     </div>
     <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
   </div>
