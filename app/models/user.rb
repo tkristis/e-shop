@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   :rememberable, :trackable, :validatable # :confirmable
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
+  validates_email_format_of :email
 end

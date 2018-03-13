@@ -13,8 +13,12 @@
         <div class="col-md-4 col-sm-4 col-xs-12 links">
           <h5>ACCOUNT</h5>
           <ul>
-            <li><%= link_to "Create an Account", new_user_registration_path %></li>
-            <li><%= link_to "Manage Your Account", about_path %></li>
+            <% if signed_in? %>
+              <li><%= link_to "Manage Your Account", about_path %></li>
+              <li><%= link_to "My Orders", orders_path %></li>
+            <% else %>
+              <li><%= link_to "Create an Account", new_user_registration_path %></li>
+            <% end %>
           </ul>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12 links">
