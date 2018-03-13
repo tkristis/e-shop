@@ -59,17 +59,18 @@ group :production do
   gem 'rails_12factor'
 end
 
-  gem 'cancancan', '~> 1.10'
-  gem 'devise'
-  gem 'rails-controller-testing'
-  gem 'will_paginate', '~> 3.1.1'
-  gem 'will_paginate-bootstrap'
-  gem 'stripe'
   ## Security scanner
   gem 'brakeman', require: false
-  gem 'dalli'
-  gem 'redis-rails'
-  gem 'newrelic_rpm'
-  gem 'figaro'
+  gem 'cancancan', '~> 1.10'
   gem 'comma', '~> 3.2.1'
+  gem 'dalli'
+  gem 'devise'
+  gem 'figaro'
+  gem 'gretel'
+  gem 'newrelic_rpm'
   gem 'rails_admin', '~> 1.3'
+  gem 'rails-controller-testing'
+  gem 'redis-rails'
+  gem 'stripe'
+  gem 'will_paginate', '~> 3.1.1'
+  gem 'will_paginate-bootstrap'
