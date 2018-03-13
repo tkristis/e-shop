@@ -1,22 +1,23 @@
 <div class="container">
-  
-  <h2>Thank you for your purchase</h2>
-  
-  <p>You will receive an email confirmation with your order details</p>
+  <center>
+    <h3>Thank you for your purchase</h3>
+    <br>
+    <!-- <p>You will receive an email confirmation with your order details</p> -->
 
-  <h3>Your order details:</h3>
-  
-  <%= link_to @product do %>
-      <p>Product: <%= @product.name %></p>
-  <% end %>
+    <h4>Your order details:</h4>
+    <br>
+    <%= link_to @product do %>
+        <p>Product: <%= @product.name %></p>
+    <% end %>
 
-  <%= image_tag(@product.image_url, size: '200x200') %>
+    <%= image_tag(@product.image_url, size: '200x200') %>
 
-  <p>Price: <%= @product.price %>&pound;</p>
+    <p>Price: <%= @product.price %>&pound;</p>
 
-  <p></p>
-    
-  <br>
-  <%= link_to 'Continue shopping', products_path, class: 'btn btn-primary' %>
+    <p></p>
+      
+    <br>
+    <%= link_to 'Continue shopping', products_path, class: 'btn btn-primary' %>
+  </center>
 
 </div>
