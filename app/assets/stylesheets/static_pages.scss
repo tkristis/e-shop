@@ -1,7 +1,7 @@
-/*************
-    GLOBAL
-*************/
-body{
+/*****************
+      GLOBAL
+*****************/
+body {
   padding:0;
   margin:0;
   background-color: #ffffff;
@@ -10,28 +10,28 @@ body{
   line-height: 18px;
   font-family: 'Lato', sans-serif;
 }
-body a{
+body a {
   transition:0.5s all;
   -webkit-transition:0.5s all;
   -moz-transition:0.5s all;
   -o-transition:0.5s all;
   -ms-transition:0.5s all;
 }
-input[type="button"],input[type="submit"]{
+input[type="button"],input[type="submit"] {
   transition:0.5s all;
   -webkit-transition:0.5s all;
   -moz-transition:0.5s all;
   -o-transition:0.5s all;
   -ms-transition:0.5s all;
 }
-h1,h2,h3,h4,h5,h6,p,label{
+h1,h2,h3,h4,h5,h6,p,label {
   margin:0; 
 } 
-ul{
+ul {
   margin:0;
   padding:0;
 }
-.img-responsive{
+.img-responsive {
   margin: 0 auto;
 }
 .form-control:focus {
@@ -40,7 +40,7 @@ ul{
   -webkit-box-shadow: 0 0 4px #9CCC65;
   box-shadow: 0 0 4px #9CCC65;
 }
-#notice{
+#notice {
   margin: 0;
 }
 .alert {
@@ -50,12 +50,7 @@ ul{
     border-radius: 0;
 }
 /************************
-        LAYOUT
-************************/
-/************************
-*************************
 				HEADER
-*************************
 ************************/
 header{
 	background-color: #689F38;
@@ -90,7 +85,7 @@ header{
 	.navbar-form{
 		margin: 0;
 	}
-	.glyphicon{
+	.header-left .glyphicon{
 		margin-right: 5px;
     color: white;
 	}
@@ -110,9 +105,7 @@ header{
   }
 }
 /************************
-*************************
-		NAVIGATION BAR
-*************************
+	NAVIGATION AND LOGO
 ************************/
 .banner-top {
 	padding-top: 25px;
@@ -223,9 +216,7 @@ header{
   }
 }
 /************************
-*************************
         FOOTER
-*************************
 ************************/
 footer{
   margin-top: 50px;
@@ -414,11 +405,9 @@ footer{
     vertical-align: text-bottom;
   }
 }
-/*********************
-**********************
+/************************
   CATEGORIES OVERVIEW
-**********************
-*********************/
+************************/
 .categories-overview{
   margin: 50px 0;
   h1{
@@ -452,9 +441,7 @@ footer{
   }
 }
 /*********************
-**********************
   LATEST PRODUCTS
-**********************
 *********************/
 .latest-product{
 	margin: 50px 0;
@@ -483,9 +470,7 @@ footer{
 	}
 }
 /************************
-*************************
-				FAQ
-*************************
+				FAQ PAGE
 ************************/
 .faq{
 	padding: 40px 0;
@@ -508,9 +493,7 @@ footer{
 	}
 }
 /************************
-*************************
-				CONTACTS
-*************************
+		  CONTACT PAGE
 ************************/
 .contact{
 	padding: 50px 0 80px 0;
@@ -569,11 +552,9 @@ footer{
 		border: none;
 	}
 }
-/************************
-*************************
-PRODUCTS LIST PAGE ADMIN
-*************************
-************************/
+/***************************
+  PRODUCTS LIST PAGE ADMIN
+***************************/
 .product-list-admin{
   color: #333;
   margin: 50px 0;
@@ -652,9 +633,7 @@ PRODUCTS LIST PAGE ADMIN
   }
 }
 /********************
-*********************
   FIXED NAVIGATION
-*********************
 ********************/
 @media screen and (min-width: 1024px){
   .fixed-menu{
@@ -1021,9 +1000,7 @@ PRODUCTS LIST PAGE ADMIN
   }
 }
 /****************************************
-*****************************************
 **TWO COLUMNS FOR BIGGER SCREEN DEVICES**
-*****************************************
 ****************************************/
 @media screen and (min-width: 425px) and (max-width: 768px){
   .col-xs-12{
