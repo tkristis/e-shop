@@ -66,7 +66,6 @@ end
   gem 'comma', '~> 3.2.1'
   gem 'dalli'
   gem 'devise'
-  gem 'dotenv-rails', :require => 'dotenv/rails-now'
   gem 'figaro'
   gem 'gretel'
   gem 'newrelic_rpm'
