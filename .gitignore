@@ -22,3 +22,4 @@ cookbooks/
 # Ignore application configuration
 /config/application.yml
 config/blacklist.yml
+config/secrets.yml
