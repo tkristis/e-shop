@@ -1,27 +1,8 @@
-== README
+# README
 
-Hi, my name is Kristis Teniauskas and i'm starting learn ruby on rails!
+Vapeclouds is rails platform which provides online products store
 
-Things you may want to cover:
+Usage:
+- Ruby 2.3.1.
+- Rails 5.0.6
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

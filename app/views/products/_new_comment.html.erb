@@ -1,4 +1,4 @@
-<% if signed_in? %>
+<% if signed_in? && @comment_allowed %>
   <h4>Add a review:</h4>
   <br>
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
@@ -13,4 +13,6 @@
       <%= f.submit "Submit", class: "btn btn-default" %>
     </p>
   <% end %>
+<% else %>
+  <h4><%= @product.name %><i> Reviews</i></h4>
 <% end %>
