@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  # before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :find_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
@@ -64,8 +65,12 @@ class CategoriesController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_category
-    @category = Category.find(params[:id])
+  # def set_category
+  #   @category = Category.find(params[:id])
+  # end
+
+  def find_category
+    @category = Category.find_by_slug!(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
