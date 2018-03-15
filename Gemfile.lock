@@ -134,6 +134,7 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    obscenity (1.0.2)
     orm_adapter (0.5.0)
     pg (0.21.0)
     puma (3.11.3)
@@ -268,7 +269,7 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.7)
+    uglifier (4.1.8)
       execjs (>= 0.3.0, < 3)
     validates_email_format_of (1.6.3)
       i18n
@@ -307,6 +308,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   newrelic_rpm
+  obscenity
   pg (~> 0.20)
   puma (~> 3.0)
   rails (>= 5.0.0.rc2, < 5.1)

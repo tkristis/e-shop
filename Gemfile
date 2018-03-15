@@ -71,6 +71,7 @@ end
   gem 'figaro'
   gem 'gretel'
   gem 'newrelic_rpm'
+  gem 'obscenity'
   gem 'rails_admin', '~> 1.3'
   gem 'rails-controller-testing'
   gem 'recaptcha', require: 'recaptcha/rails'

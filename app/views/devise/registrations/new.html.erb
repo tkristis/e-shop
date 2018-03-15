@@ -21,13 +21,13 @@
       <div class="field form-group">
         <%= f.label :Date_of_birth %>
         <span class="required"> * </span>
-        <%= f.date_field :date_of_birth, type: "date", :required => true, class: "form-control" %>
+        <%= f.date_field :date_of_birth, type: "date", required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :email %>
         <span class="required"> * </span>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
@@ -36,13 +36,13 @@
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        <%= f.password_field :password, autocomplete: "off", required: true, class: "form-control" %>
       </div>
 
       <div class="field form-group">
         <%= f.label :password_confirmation %>
         <span class="required"> * </span>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", required: true, class: "form-control" %>
       </div>
 
 <!--         <div class="field form-group">
