@@ -1,4 +1,3 @@
-<% if @comment %>
 <div class="product-reviews">
   <% @comments.each do |comment| %>
   <div class="row">
@@ -19,14 +18,16 @@
  </div>
  <% end %>
 </div>
-<% else %>
+
+<% if !@comments.any? %>
     <hr>
     <p>There are no product reviews yet.</p>
-    <% if !user_signed_in? %>
-      <br>
-      <p>
-        <%= link_to t('auth.sign_in'), new_user_session_path %>
-        if you want to write a review.
-      </p>
-    <% end %>
+<% end %>
+
+<% if !user_signed_in? %>
+  <br>
+  <p>
+    <%= link_to t('auth.sign_in'), new_user_session_path %>
+    if you want to write a review.
+  </p>
 <% end %>

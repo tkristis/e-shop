@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   # before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :find_page, only: [:show, :edit, :update, :destroy]
+  before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   # Access search term
   def index
@@ -84,7 +84,7 @@ class ProductsController < ApplicationController
     #   @product = Product.find(params[:id])
     # end
 
-    def find_page
+    def find_product
       @product = Product.find_by_slug!(params[:id])
     end
 
