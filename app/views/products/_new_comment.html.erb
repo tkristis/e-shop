@@ -3,7 +3,11 @@
   <br>
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
     <p>
-      <%= f.text_area :body, cols: "60", rows: "5" %>
+      <%= f.text_field :title, placeholder: " Review title" %>
+    </p>
+    <br>
+    <p>
+      <%= f.text_area :body, cols: "60", rows: "5", placeholder: " Your review about product" %>
     </p>
     <p>
       <div class="rating"></div>

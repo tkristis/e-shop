@@ -1,5 +1,8 @@
 <div class="row">
   <hr>
+  <h4>
+      <b><%= comment.title %></b>
+  </h4>
   <p>
     <%= comment.user.first_name %>  <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
   </p>

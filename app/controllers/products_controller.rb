@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @comments = @product.comments.order('created_at DESC').paginate(page: params[:page], per_page: 5)
-    @comment_allowed =! @comments.find_by(user_id: current_user.id)
+    @comment_allowed =! @comments.find_by(user_id: current_user)
   end
 
   # GET /products/new
