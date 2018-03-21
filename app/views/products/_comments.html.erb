@@ -20,8 +20,10 @@
 </div>
 
 <% if !@comments.any? %>
+  <div class="no-reviews">
     <hr>
     <p>There are no product reviews yet.</p>
+  </div>
 <% end %>
 
 <% if !user_signed_in? %>

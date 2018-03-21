@@ -3,6 +3,14 @@
     <div class="row">
     <% if (@products.empty?) %>
         <h1>No products found</h1>
+        <h2>Try again</h2>
+          <!-- Search box -->
+          <%= form_tag("/products", method: "get", class: "navbar-form") do %>
+          <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+          <button class="btn btn-primary search-btn">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+          <% end %>
     <% else %>
          <h1>All products</h1>
         <%= render @products, cache: Proc.new{|item| [item, 'show']} %>

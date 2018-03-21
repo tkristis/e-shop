@@ -49,6 +49,17 @@ ul {
     border: none;
     border-radius: 0;
 }
+.search-btn{
+  color: #8BC34A;
+  background-color: #F1F8E9;
+  border: none!important;
+}
+.search-btn:hover, .search-btn:active, .search-btn:focus, .search-btn:visited{
+  background-color: #C5E1A5 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-color: #C5E1A5 !important;
+}
 /************************
 				HEADER
 ************************/
@@ -89,17 +100,6 @@ header{
 		margin-right: 5px;
     color: white;
 	}
-  .btn-primary{
-    color: #8BC34A;
-    background-color: #F1F8E9;
-    border: none!important;
-  }
-  .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:visited{
-    background-color: #C5E1A5 !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-color: #C5E1A5 !important;
-  }
   input{
     display: none;
   }

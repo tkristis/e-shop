@@ -37,4 +37,23 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  # config.model Product do
+  #   edit do
+  #     field :name
+  #     field :description, :rich_editor do
+  #      config({
+  #         :insert_many => true
+  #       })
+  #     end
+  #     field :image_url, :rich_picker do
+  #       config({
+  #         :allowed_styles => [:original],
+  #         :view_mode => "list"
+  #       })
+  #     end
+  #     field :price
+  #     field :slug
+  #   end
+  # end
 end
