@@ -25,11 +25,3 @@
     <p>There are no product reviews yet.</p>
   </div>
 <% end %>
-
-<% if !user_signed_in? %>
-  <br>
-  <p>
-    <%= link_to t('auth.sign_in'), new_user_session_path %>
-    if you want to write a review.
-  </p>
-<% end %>

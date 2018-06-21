@@ -8,6 +8,7 @@ class Comment < ApplicationRecord
   validates :rating, numericality: { only_integer: true }
   validates :body, presence: true
   validates :body,  obscenity: { sanitize: true, replacement: "[censored]" }
+  validates :title,  obscenity: { sanitize: true, replacement: "[censored]" }
 
   after_create_commit { CommentUpdateJob.perform_later(self, self.user) }
 end

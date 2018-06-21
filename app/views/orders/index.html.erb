@@ -1,6 +1,10 @@
 <div class="container text-center">
   <h1 class="text-center"> My Orders</h1>
-    
+    <% if @orders.blank? %>
+        <br><br><br>
+        <h5>No orders yet.</h5>
+    <% else %>
+
     <% @orders.each do |order| %>
         <div class="col-md-4 col-sm-6 col-xs-12">
 
@@ -36,5 +40,6 @@
             <%= link_to 'View', order, :class => "btn btn-success" %>
             <br><hr><br>
         </div>
+    <% end %>
     <% end %>
 </div>

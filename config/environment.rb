@@ -5,7 +5,6 @@ require_relative 'application'
 Rails.application.initialize!
 
 # Sendgrid email plugin
-# Some message
 ActionMailer::Base.smtp_settings = {
   address: 'smtp.sendgrid.net',
   port: '587',
