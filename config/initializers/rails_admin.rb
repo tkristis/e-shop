@@ -5,7 +5,15 @@ RailsAdmin.config do |config|
   config.authenticate_with do
     warden.authenticate! scope: :user
   end
-  config.current_user_method(&:current_user)
+
+  config.authorize_with do
+    if user_signed_in?
+      redirect_to main_app.root_path unless current_user.try(:admin?)
+    end
+  end
+  
+  # config.current_user_method(&:current_user)
+  # config.current_user_method { current_admin }
 
   ## == Cancan ==
   # config.authorize_with :cancan

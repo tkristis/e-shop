@@ -13,7 +13,10 @@
           <% end %>
     <% else %>
          <h1>All products</h1>
-        <%= render @products, cache: Proc.new{|item| [item, 'show']} %>
+         <% if @products %>
+          <h5><b>Total found <%= @products.count %> products.</h5></p><br><br>
+         <% end %>
+         <%= render @products, cache: Proc.new{|item| [item, 'show']} %>
     <% end %>
     </div>
     <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
