@@ -2,10 +2,11 @@ RailsAdmin.config do |config|
   ### Popular gems integration
   config.main_app_name = ["Vape Shop", "Clouds"]
   ## == Devise ==
-  config.authenticate_with do
-    warden.authenticate! scope: :user
+  config.authorize_with do
+    redirect_to main_app.root_path unless current_user.admin?
   end
-  config.current_user_method(&:current_user)
+
+  # config.current_user_method { current_admin }
 
   ## == Cancan ==
   # config.authorize_with :cancan

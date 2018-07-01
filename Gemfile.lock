@@ -194,7 +194,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
-    recaptcha (4.8.0)
+    recaptcha (4.9.0)
       json
     redis (4.0.1)
     redis-actionpack (5.0.2)
@@ -329,9 +329,6 @@ DEPENDENCIES
   web-console (~> 3.0)
   will_paginate (~> 3.1.1)
   will_paginate-bootstrap
-
-RUBY VERSION
-   ruby 2.3.1p112
 
 BUNDLED WITH
    1.16.1

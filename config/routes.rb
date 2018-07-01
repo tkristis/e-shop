@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
+  resources :users
+
   resources :products do
     resources :comments
   end
@@ -27,8 +29,6 @@ Rails.application.routes.draw do
   resources :categories do
     resources :products
   end
-
-  resources :users
 
   resources :orders, only: [:index, :show, :create, :destroy]
 

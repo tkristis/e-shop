@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
   validates_email_format_of :email
+  cattr_accessor :current_user
+
+  public
+
+  def admin?
+    current_user.has_attribute(:admin)
+  end
+
 end
