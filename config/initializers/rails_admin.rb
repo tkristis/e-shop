@@ -3,9 +3,12 @@ RailsAdmin.config do |config|
   config.main_app_name = ["Vape Shop", "Clouds"]
   ## == Devise ==
   config.authorize_with do
-    redirect_to main_app.root_path unless current_user.admin?
+    if user_signed_in?
+      redirect_to main_app.root_path unless current_user.try(:admin?)
+    end
   end
-
+  
+  # config.current_user_method(&:current_user)
   # config.current_user_method { current_admin }
 
   ## == Cancan ==
